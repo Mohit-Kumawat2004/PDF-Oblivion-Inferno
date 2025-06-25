@@ -1,0 +1,728 @@
+.action-btn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  background: #00ffb3; /* Green-cyan */
+  color: #000;
+  box-shadow: 0 0 24px #00ffb3, 0 0 48px #00ffb3;
+  font-size: 16px;
+}
+.action-btn:hover {
+  background: #00cc92;
+  transform: scale(1.01);
+  box-shadow: 0 0 32px #00ffb3, 0 0 64px #00ffb3;
+}
+body.dark .action-btn {
+  background: #00ffb3;
+  color: #000;
+  box-shadow: 0 0 24px #00ffb3, 0 0 48px #00ffb3;
+}
+body.dark .action-btn:hover {
+  background: #00cc92;
+  box-shadow: 0 0 32px #00ffb3, 0 0 64px #00ffb3;
+}
+
+
+/* === DEFAULT (Light Mode) === */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e3f0ff 0%, #f9fafc 100%);
+  color: #222;
+  margin: 0;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+.container {
+  background: #fff;
+  padding: 32px 28px 28px 28px;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+  border: 1px solid #e3e8ee;
+  width: 400px;
+  text-align: center;
+  transition: transform 0.25s cubic-bezier(.4,2,.6,1), box-shadow 0.25s,filter 0.25s, opacity 0.25s;
+}
+.container:hover {
+  animation: bounceOut 0.6s cubic-bezier(.25,1.5,.5,1) forwards;
+  box-shadow: 0 0 64px 8px #00ffe0, 0 0 96px 16px #00ff99;
+  opacity: 0.92;
+  z-index: 2;
+}
+@keyframes bounceOut {
+  0% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.06);
+  }
+  80% {
+    transform: scale(0.98);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+input, textarea {
+  width: 94%;
+  box-sizing: border-box;
+  padding: 11px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 1.5px solid #b6c2d1;
+  background: #f5f8fa;
+  color: #222;
+  transition: background 0.4s, color 0.4s, border 0.3s;
+  font-size: 15px;
+  display: block;
+}
+input:focus, textarea:focus {
+  border: 1.5px solid #2563eb;
+  background: #eaf1fb;
+  outline: none;
+}
+
+input[type="file"] {
+  background: #f5f8fa;
+  border: none;
+  padding: 0;
+}
+
+button, #generateBtn {
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+  margin-top: 10px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 2px 8px rgba(37, 99, 235, 0.08);
+  font-size: 16px;
+}
+button:hover, #generateBtn:hover {
+  background: #174ea6;
+  transform: scale(1.03);
+}
+button:active, #generateBtn:active {
+  background: #113366;
+  transform: scale(0.98);
+}
+#generateBtn:disabled {
+  background-color: #b6c2d1;
+  cursor: not-allowed;
+}
+
+h1 {
+  color: #2563eb;
+  margin-bottom: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: color 0.3s;
+}
+
+.toggle-btn {
+  background: linear-gradient(135deg, #e0e7ff, #f0fdfa);
+  color: #2563eb;
+  padding: 8px 16px;
+  border-radius: 20px;
+  margin-top: 15px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid #dbeafe;
+  box-shadow: 0 0 8px #e0e7ff;
+}
+.toggle-btn:hover {
+  background: #dbeafe;
+  color: #174ea6;
+}
+
+#pdfCompressor #pdfCompressPreview {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #16a085;
+  word-break: break-all;
+}
+
+.subtitle-italic {
+  display: block;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: darkgreen;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+  opacity: 0.92;
+}
+body.dark .subtitle-italic {
+  color: yellow;
+}
+@media (max-width: 600px) {
+  .subtitle-italic {
+    font-size: 0.98rem;
+    margin-top: 4px;
+  }
+}
+
+  
+/* === DARK MODE with NEON === */
+body.dark {
+  background: #0d0d0d;
+  color: #0ff;
+}
+
+body.dark .container {
+  background: #1a1a1a;
+  box-shadow: 0 0 20px #0ff;
+}
+
+body.dark input,
+body.dark textarea {
+  background: #121212;
+  color: #0ff;
+  border: 1px solid #0ff;
+}
+
+body.dark h1 {
+  color: #0ff;
+  text-shadow: 0 0 5px #0ff;
+}
+
+body.dark #generateBtn {
+  background: linear-gradient(45deg, #00f0ff, #00ff88);
+  color: #000;
+  box-shadow: 0 0 15px #00ffe0, 0 0 25px #00ff99;
+}
+
+body.dark #generateBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffe0, 0 0 30px #00ff99;
+}
+
+body.dark .toggle-btn {
+  background: #bb0dd2;
+  color: #0ff;
+  border: 1px solid #0ff;
+  box-shadow: 0 0 10px #0ff;
+}
+/* === Toggle Switch Button at Top-Right === */
+.theme-toggle {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+  width: 54px;
+  height: 28px;
+  background: linear-gradient(135deg, #00f0ff, #00ff88);
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #00ffe0, 0 0 20px #00ff99;
+  transition: background 0.4s, box-shadow 0.4s;
+  display: flex;
+  align-items: center;
+  padding: 0 4px;
+  z-index: 1000;
+  overflow: hidden;
+}
+  
+.theme-toggle .toggle-slider {
+  width: 22px;
+  height: 22px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s cubic-bezier(.4,2,.6,1), background 0.3s;
+  box-shadow: 0 2px 8px #00ffe0;
+  position: relative;
+  left: 0;
+}
+  /* Move slider to right when dark mode is on */
+body.dark .theme-toggle .toggle-slider {
+  background: #0ff;
+  transform: translateX(26px);
+  box-shadow: 0 2px 16px #00ffe0;
+}
+  
+/* When Dark Mode is On (body has .dark) */
+body.dark .theme-toggle {
+  background: linear-gradient(135deg, #00f0ff, #00ff88);
+  box-shadow: 0 0 18px #0ff, 0 0 32px #00ff99;
+  border: 1.5px solid #00ffe0;
+  backdrop-filter: blur(4px);
+  justify-content: flex-end;
+  transition: background 0.4s, box-shadow 0.4s, border 0.4s;
+}
+/* Optional: Add a subtle icon inside the slider */
+.theme-toggle .toggle-slider::before {
+  content: '';
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 6px auto;
+  border-radius: 50%;
+  background: #00ffe0;
+  opacity: 0.5;
+  transition: background 0.3s;
+}
+body.dark .theme-toggle .toggle-slider::before {
+  background: #fff;
+  opacity: 0.7;
+}
+
+
+body.dark .theme-toggle .toggle-slider {
+  background: #0ff;
+}
+.image-thumb {
+  position: relative;
+  display: inline-block;
+  margin: 5px;
+}
+.image-thumb img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border: 2px solid #0ff;
+  border-radius: 8px;
+  box-shadow: 0 0 8px #0ff;
+}
+.remove-image-btn {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #ff2222;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 0 4px #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  transition: background 0.2s;
+}
+.remove-image-btn:hover {
+  background: #b30000;
+}
+
+
+/* === PDF to Image Converter Specific Styling === */
+#pdfToImage #pdfImageOutput {
+margin-top: 15px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+max-height: 400px;
+overflow-y: auto;
+padding: 10px;
+border: 1px solid #dbeafe;
+border-radius: 10px;
+background: #f0f4ff;
+box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/*PDF TO TEXT CSSS*/
+#pdfTextOutput{
+  width: 94%;
+  min-height: 120px;
+  box-sizing: border-box;
+  padding: 11px;
+  margin: 10px auto;
+  border-radius: 8px;
+  border: 1.5px solid #b6c2d1;
+  background: #f5f8fa;
+  color: #222;
+  font-size: 15px;
+  display: block;
+  resize: vertical;
+}
+
+/* For dark mode look */
+body.dark #pdfToImage #pdfImageOutput {
+background: #121212;
+border: 1px solid #0ff;
+box-shadow: inset 0 0 10px #0ff2;
+}
+
+/* Images inside output */
+#pdfToImage #pdfImageOutput img {
+border-radius: 8px;
+border: 2px solid #2563eb;
+box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+}
+
+/* Dark mode for image borders */
+body.dark #pdfToImage #pdfImageOutput img {
+border: 2px solid #0ff;
+box-shadow: 0 0 10px #0ff;
+}
+
+/* Download ZIP Button */
+#downloadImageZipBtn {
+display: none;
+margin-top: 12px;
+padding: 10px 16px;
+border: none;
+border-radius: 8px;
+font-weight: bold;
+cursor: pointer;
+background: #10b981;
+color: #fff;
+box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+transition: background 0.3s, transform 0.2s;
+}
+
+#downloadImageZipBtn:hover {
+background: #059669;
+transform: scale(1.03);
+}
+
+#downloadImageZipBtn:active {
+background: #047857;
+transform: scale(0.97);
+}
+
+body.dark #downloadImageZipBtn {
+  background: #00ff99;
+  color: #000;
+  box-shadow: 0 0 12px #0f08, 0 0 18px #0f0;
+}
+
+body.dark #downloadImageZipBtn:hover {
+  background: #00cc77;
+}
+
+.tools-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: stretch;       
+  gap: 30px;
+  padding: 40px 20px;
+  max-width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.file-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.clear-btn {
+  background-color: #ff3c3c;
+  border: none;
+  color: white;
+  font-size: 14px;
+  padding: 2px 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.clear-btn:hover {
+background-color: #e60000;
+}
+
+
+/* Individual tool cards */
+.tools-sections .container {
+width: 320px;
+min-height: 500px;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background: #111;
+border-radius: 10px;
+padding: 20px;
+box-shadow: 0 0 20px cyan;
+box-sizing: border-box;
+}
+@media (max-width: 768px) {
+.tools-sections {
+  justify-content: center;
+}
+
+.tools-sections .container {
+  width: 90%; /* full width on mobile */
+}
+}
+#pdfDocOutput {
+max-height: 300px;       /* Limit the height */
+overflow-y: auto;        /* Scroll if content is long */
+padding: 10px;
+border: 1px solid #00f0ff;
+border-radius: 8px;
+background-color: rgba(0, 0, 0, 0.2); /* For dark theme feel */
+margin-top: 10px;
+}
+
+.doc-preview {
+white-space: pre-wrap;   /* Keeps text readable */
+word-break: break-word;
+font-family: monospace;
+font-size: 14px;
+color: #00ffee;
+}
+
+
+.main-title {
+text-align: center;
+font-size: 2.5rem;
+margin: 40px 0 20px;
+color: #0ff;
+text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00faff;
+font-family: 'Orbitron', sans-serif;
+letter-spacing: 2px;
+animation: glowPulse 2s infinite alternate;
+}
+
+#pdfPptOutput{
+  border: 2px solid cyan;
+  border-radius: 10px;
+  box-shadow: 0 0 10px cyan;
+}
+#downloadPptBtn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px red;
+  display: none;
+  transition: 0.3s;
+}
+
+#downloadPptBtn:hover {
+  background-color: #e60000;
+  box-shadow: 0 0 20px red;
+}
+
+@keyframes glowPulse {
+0% {
+  text-shadow: 0 0 10px #0ff, 0 0 20px #0ff, 0 0 40px #00faff;
+}
+100% {
+  text-shadow: 0 0 20px #0ff, 0 0 30px #0ff, 0 0 60px #00faff;
+}
+}
+
+
+/*OVERRIDES LIGHT MODE*/
+body:not(.dark) .main-title {
+color: #16a085;
+text-shadow: none;
+animation: none;
+}
+
+/* Tool cards: soft background, no neon, gentle shadow */
+body:not(.dark) .tools-sections .container {
+background: #f8fafc;
+border: 1px solid #e0e7ef;
+box-shadow: 0 8px 32px 0 rgba(22, 160, 133, 0.08);
+}
+
+/* Form fields: soft green/teal accent */
+body:not(.dark) input,
+body:not(.dark) textarea {
+background: #eef6f3;
+color: #222;
+border: 1.5px solid #b2dfdb;
+}
+body:not(.dark) input:focus,
+body:not(.dark) textarea:focus {
+border: 1.5px solid #16a085;
+background: #e0f2f1;
+}
+
+/* File input: blend with new style */
+body:not(.dark) input[type="file"] {
+background: #eef6f3;
+border: none;
+color: #222;
+}
+
+/* Buttons: teal/green accent */
+body:not(.dark) button,
+body:not(.dark) #generateBtn {
+background: #16a085;
+color: #fff;
+box-shadow: 0 2px 8px rgba(22, 160, 133, 0.08);
+}
+body:not(.dark) button:hover,
+body:not(.dark) #generateBtn:hover {
+background: #12876f;
+}
+body:not(.dark) button:active,
+body:not(.dark) #generateBtn:active {
+background: #0e6251;
+}
+body:not(.dark) #generateBtn:disabled {
+background-color: #b2dfdb;
+cursor: not-allowed;
+}
+
+/* Headings: soft accent */
+body:not(.dark) h1 {
+color: #16a085;
+text-shadow: none;
+}
+
+/* Toggle button: gentle accent */
+body:not(.dark) .toggle-btn {
+background: linear-gradient(135deg, #e0f2f1, #f0fdfa);
+color: #16a085;
+border: 1px solid #b2dfdb;
+box-shadow: 0 0 8px #b2dfdb;
+}
+body:not(.dark) .toggle-btn:hover {
+background: #b2dfdb;
+color: #0e6251;
+}
+
+/* Image preview border: teal accent */
+body:not(.dark) .image-thumb img {
+border: 2px solid #16a085;
+box-shadow: 0 0 8px #b2dfdb;
+}
+
+/* Remove neon glow from cards */
+body:not(.dark) .tools-sections .container {
+box-shadow: 0 8px 32px 0 rgba(22, 160, 133, 0.08);
+border: 1px solid #e0e7ef;
+background: #f8fafc;
+}
+
+@media (max-width: 600px) {
+  .theme-toggle {
+    top: 12px;
+    right: 12px;
+    width: 44px;
+    height: 22px;
+    padding: 0 2px;
+  }
+  .theme-toggle .toggle-slider {
+    width: 16px;
+    height: 16px;
+  }
+  body.dark .theme-toggle .toggle-slider {
+    transform: translateX(18px);
+  }
+}
+
+/* Responsive adjustments for all devices */
+@media (max-width: 1200px) {
+  .tools-sections {
+    gap: 18px;
+    padding: 30px 10px;
+  }
+  .tools-sections .container {
+    min-width: 300px;
+    width: 45vw;
+    max-width: 95vw;
+    min-height: 420px;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .tools-sections {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 4vw;
+  }
+  .tools-sections .container {
+    width: 98vw;
+    max-width: 480px;
+    min-width: unset;
+    margin: 0 auto;
+  }
+  .main-title {
+    font-size: 2rem;
+    margin: 24px 0 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 1.3rem;
+    margin: 18px 0 8px;
+    padding: 0 4vw;
+  }
+  .tools-sections {
+    padding: 10px 0;
+    gap: 16px;
+  }
+  .tools-sections .container {
+    width: 98vw;
+    min-width: unset;
+    max-width: 99vw;
+    padding: 10px 2vw;
+    font-size: 15px;
+  }
+  input, textarea {
+    width: 98%;
+    font-size: 14px;
+    padding: 8px;
+  }
+  button, #generateBtn {
+    font-size: 15px;
+    padding: 10px 0;
+  }
+  .image-thumb img {
+    width: 44px;
+    height: 44px;
+  }
+  #pdfPptOutput {
+    font-size: 13px;
+    padding: 6px;
+  }
+  .file-input-wrapper {
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .clear-btn {
+    font-size: 13px;
+    padding: 2px 6px;
+  }
+  
+}
+
+/* Make sure file input and clear button don't overflow */
+.file-input-wrapper {
+  flex-wrap: wrap;
+  gap: 6px;
+}
+.clear-btn {
+  font-size: 13px;
+  padding: 2px 6px;
+}
+
+/* Prevent horizontal scroll */
+html, body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body.dark #pdfTextOutput {
+  background: #181c1f !important;
+  border: 1.5px solid #0ff !important;
+  color: #0ff !important;
+}
+

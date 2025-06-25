@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PDF Maker with Image</title>
+  <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+  <script src="https://unpkg.com/pdf-lib/dist/pdf-lib.min.js"></script>
+  <script src="https://unpkg.com/pptxgenjs@3.11.0/dist/pptxgen.bundle.js"></script>
+</head>
+<body>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle Theme">
+    <span class="toggle-slider"></span>
+  </button>
+
+  <h1 class="main-title">
+    QuantumPDF Forge
+    <span class="subtitle-italic">Spin. Split. Shift. Simplify.</span>
+  </h1>
+
+  <div class="tools-sections">
+    <div class="container" id="notesmaker">
+      <h1>📝 IMAGE TO PDF CONVERTER</h1>
+      <input type="text" id="title" placeholder="Enter PDF Title" />
+      <textarea id="content" rows="6" placeholder="Enter your content..."></textarea>
+      <input type="file" id="image" accept="image/*" multiple />
+      <div id="imagePreviewContainer" style="display: flex; gap: 10px; flex-wrap: wrap; margin: 10px 0;"></div>
+      <button id="generateBtn">Download PDF</button>
+    </div>
+
+    <div class="container" id="pdfToImage">
+      <h1>🖼️ PDF TO IMAGE CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfImageInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearImageInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToImageBtn">Convert to Images</button>
+      <div id="pdfImageOutput"></div>
+      <button class="action-btn" id="downloadImageZipBtn">Download Images (ZIP)</button>
+    </div>
+
+    <div class="container" id="pdfToDoc">
+      <h1>📄 PDF TO DOC CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfDocInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearDocInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToDocBtn">Convert to DOC</button>
+      <div id="pdfDocOutput"></div>
+      <button class="action-btn" id="downloadDocBtn">Download DOC</button>
+    </div>
+
+    <div class="container" id="pdfToPpt">
+      <h1>📊 PDF TO PPT CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfPptInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearPptInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToPptBtn">Convert to PPTX</button>
+      <div id="pdfPptOutput"></div>
+      <button class="action-btn" id="downloadPptBtn">Download PPTX</button>
+    </div>
+
+    <div class="container" id="pdfCompressor">
+      <h1>🗜️ PDF COMPRESSOR</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfCompressInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearCompressInputBtn" style="display: none;">✖</button>
+      </div>
+      <div id="pdfCompressPreview" style="margin: 10px 0; font-size: 14px;"></div>
+      <button class="action-btn" id="compressPdfBtn">Compress PDF</button>
+      <div id="pdfCompressOutput"></div>
+      <button class="action-btn" id="downloadCompressedPdfBtn" style="display: none;">Download Compressed PDF</button>
+    </div>
+
+    <div class="container" id="pdfToText">
+      <h1>📑 PDF TO TEXT CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfTextInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearTextInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToTextBtn">Convert to Text</button>
+      <div id="pdfTextOutput"></div>
+      <button class="action-btn" id="downloadTextBtn">Download Text</button>
+    </div>
+
+    <div class="container" id="pdfToHtml">
+      <h1>🌐 PDF TO HTML CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfHtmlInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearHtmlInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToHtmlBtn">Convert to HTML</button>
+      <div id="pdfHtmlOutput"></div>
+      <button class="action-btn" id="downloadHtmlBtn">Download HTML</button>
+    </div>
+
+    <div class="container" id="pdfToEpub">
+      <h1>📚 PDF TO EPUB CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfEpubInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearEpubInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToEpubBtn">Convert to EPUB</button>
+      <div id="pdfEpubOutput"></div>
+      <button class="action-btn" id="downloadEpubBtn" style="display: none;">Download EPUB</button>
+    </div>
+
+    <div class="container" id="pdfToZip">
+      <h1>📦 PDF TO ZIP CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfZipInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearZipInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToZipBtn">Convert to ZIP</button>
+      <div id="pdfZipOutput"></div>
+      <button class="action-btn" id="downloadZipBtn" style="display: none;">Download ZIP</button>
+    </div>
+
+    <div class="container" id="pdfToJson">
+      <h1>📊 PDF TO JSON CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfJsonInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearJsonInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToJsonBtn">Convert to JSON</button>
+      <div id="pdfJsonOutput"></div>
+      <button class="action-btn" id="downloadJsonBtn">Download JSON</button>
+    </div>
+
+    <div class="container" id="pdfToCsv">
+      <h1>📈 PDF TO CSV CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfCsvInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearCsvInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToCsvBtn">Convert to CSV</button>
+      <div id="pdfCsvOutput"></div>
+      <button class="action-btn" id="downloadCsvBtn">Download CSV</button>
+    </div>
+
+    <div class="container" id="pdfToXml">
+      <h1>📄 PDF TO XML CONVERTER</h1>
+      <div class="file-input-wrapper">
+        <input type="file" id="pdfXmlInput" accept="application/pdf" />
+        <button class="clear-btn" id="clearXmlInputBtn" style="display: none;">✖</button>
+      </div>
+      <button id="convertPdfToXmlBtn">Convert to XML</button>
+      <div id="pdfXmlOutput"></div>
+      <button class="action-btn" id="downloadXmlBtn">Download XML</button>
+    </div>
+    
+  <script src="script.js"></script>
+</body>
+</html>
