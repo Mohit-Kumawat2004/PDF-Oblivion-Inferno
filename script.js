@@ -1,916 +1,3105 @@
-// === Theme Initialization ===
-if (!localStorage.getItem("theme")) {
-  localStorage.setItem("theme", "dark");
-}
-if (localStorage.getItem("theme") === "dark") {
-  document.body.classList.add("dark");
-} else {
-  document.body.classList.remove("dark");
-}
-
-const imageInput = document.getElementById("image");
-const imagePreviewContainer = document.getElementById("imagePreviewContainer");
+const _0x14a98f = _0x3257;
+(function (_0x5daabc, _0x30b789) {
+  const _0x1cc3a7 = _0x3257,
+    _0x413278 = _0x5daabc();
+  while (!![]) {
+    try {
+      const _0x4b8da6 =
+        -parseInt(_0x1cc3a7(0x383)) /
+          (-0xfbb * 0x1 + -0x7 * -0xb2 + 0x6b * 0x1a) +
+        -parseInt(_0x1cc3a7(0x4a3)) /
+          (0x1235 + -0x1d71 * -0x1 + 0x17d2 * -0x2) +
+        (-parseInt(_0x1cc3a7(0x274)) / (0x4c8 * 0x3 + -0x1ba0 * 0x1 + 0xd4b)) *
+          (parseInt(_0x1cc3a7(0x316)) /
+            (-0x2b * 0x6a + -0x22b8 + -0x19 * -0x21a)) +
+        parseInt(_0x1cc3a7(0x3aa)) / (-0x35 * -0x4f + -0x2 * 0xb7b + 0x6a0) +
+        parseInt(_0x1cc3a7(0x423)) / (-0x58e + -0x1a4 + 0x738) +
+        (-parseInt(_0x1cc3a7(0x34b)) / (0x1 * 0x270e + -0x26d6 + -0x31 * 0x1)) *
+          (-parseInt(_0x1cc3a7(0x2cf)) / (0x1acf + -0x1fed + -0x526 * -0x1)) +
+        parseInt(_0x1cc3a7(0x414)) / (-0xb20 + 0x217e + 0x1655 * -0x1);
+      if (_0x4b8da6 === _0x30b789) break;
+      else _0x413278["push"](_0x413278["shift"]());
+    } catch (_0x33086e) {
+      _0x413278["push"](_0x413278["shift"]());
+    }
+  }
+})(_0x4378, 0xcc686 + -0x1 * -0x18143 + -0x1 * 0x6a95b);
+!localStorage[_0x14a98f(0x2ec)](_0x14a98f(0x42c)) &&
+  localStorage[_0x14a98f(0x277)](_0x14a98f(0x42c), _0x14a98f(0x22f));
+localStorage[_0x14a98f(0x2ec)](_0x14a98f(0x42c)) === _0x14a98f(0x22f)
+  ? document[_0x14a98f(0x464)][_0x14a98f(0x41f)][_0x14a98f(0x441)](
+      _0x14a98f(0x22f)
+    )
+  : document[_0x14a98f(0x464)][_0x14a98f(0x41f)][_0x14a98f(0x203)](
+      _0x14a98f(0x22f)
+    );
+const imageInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3f8)
+  ),
+  imagePreviewContainer = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x32a) + _0x14a98f(0x41a) + "r"
+  );
 let selectedImages = [];
-
-imageInput.addEventListener("change", function () {
-  const files = Array.from(this.files).filter((f) =>
-    f.type.startsWith("image/")
-  );
-  selectedImages = files;
-  renderImagePreviews();
+imageInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), function () {
+  const _0x3464ad = _0x14a98f,
+    _0x28da7e = {
+      kFXEH: function (_0x1a03ce) {
+        return _0x1a03ce();
+      },
+    },
+    _0x2dc9ed = Array[_0x3464ad(0x409)](this[_0x3464ad(0x2d5)])[
+      _0x3464ad(0x38c)
+    ]((_0x4796b4) =>
+      _0x4796b4[_0x3464ad(0x3b8)][_0x3464ad(0x41d)](_0x3464ad(0x22a))
+    );
+  (selectedImages = _0x2dc9ed),
+    _0x28da7e[_0x3464ad(0x2eb)](renderImagePreviews);
 });
-
 function renderImagePreviews() {
-  imagePreviewContainer.innerHTML = "";
-  selectedImages.forEach((file, idx) => {
-    const reader = new FileReader();
-    reader.onload = function (e) {
-      const div = document.createElement("div");
-      div.className = "image-thumb";
-      div.innerHTML = `
-        <img src="${e.target.result}" alt="Image ${idx + 1}">
-        <button class="remove-image-btn" data-idx="${idx}">&times;</button>
-      `;
-      imagePreviewContainer.appendChild(div);
+  const _0x42078c = _0x14a98f,
+    _0x1f3b3d = {
+      msBmi: _0x42078c(0x471),
+      JBOPO: _0x42078c(0x395) + "b",
+      hyQZp: function (_0x296182, _0x11bcde) {
+        return _0x296182 + _0x11bcde;
+      },
     };
-    reader.readAsDataURL(file);
-  });
+  (imagePreviewContainer[_0x42078c(0x251)] = ""),
+    selectedImages[_0x42078c(0x3a4)]((_0x1ea8fb, _0x3a6169) => {
+      const _0x706cf1 = _0x42078c,
+        _0x160174 = new FileReader();
+      (_0x160174[_0x706cf1(0x35c)] = function (_0x4e3aba) {
+        const _0x384205 = _0x706cf1,
+          _0x1efee3 = document[_0x384205(0x3e4) + _0x384205(0x24f)](
+            _0x1f3b3d[_0x384205(0x3c3)]
+          );
+        (_0x1efee3[_0x384205(0x469)] = _0x1f3b3d[_0x384205(0x297)]),
+          (_0x1efee3[_0x384205(0x251)] =
+            _0x384205(0x3ee) +
+            _0x384205(0x3d1) +
+            _0x4e3aba[_0x384205(0x303)][_0x384205(0x39e)] +
+            (_0x384205(0x35b) + _0x384205(0x37b)) +
+            _0x1f3b3d[_0x384205(0x23a)](
+              _0x3a6169,
+              -0xda4 + 0x19c4 + 0xc1f * -0x1
+            ) +
+            (_0x384205(0x3d0) +
+              _0x384205(0x422) +
+              _0x384205(0x333) +
+              _0x384205(0x3c0) +
+              _0x384205(0x364) +
+              _0x384205(0x262)) +
+            _0x3a6169 +
+            (_0x384205(0x225) + _0x384205(0x278) + _0x384205(0x2a9))),
+          imagePreviewContainer[_0x384205(0x2c6) + "d"](_0x1efee3);
+      }),
+        _0x160174[_0x706cf1(0x421) + _0x706cf1(0x268)](_0x1ea8fb);
+    });
 }
-
-imagePreviewContainer.addEventListener("click", function (e) {
-  if (e.target.classList.contains("remove-image-btn")) {
-    const idx = parseInt(e.target.getAttribute("data-idx"));
-    selectedImages.splice(idx, 1);
-    renderImagePreviews();
-    imageInput.value = "";
-  }
-});
-
-async function generatePDF() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
-
-  const title = document.getElementById("title").value.trim();
-  const content = document.getElementById("content").value.trim();
-
-  if (!title || !content) {
-    alert("Please enter both title and content.");
-    return;
-  }
-
-  doc.setFontSize(18);
-  doc.setFont("Helvetica", "bold");
-  doc.text(title, 20, 30);
-
-  doc.setFontSize(12);
-  doc.setFont("Helvetica", "normal");
-  doc.text(content, 20, 50, { maxWidth: 170 });
-
-  if (selectedImages.length === 0) {
-    doc.save(`${title}.pdf`);
-    return;
-  }
-
-  for (let i = 0; i < selectedImages.length; i++) {
-    const file = selectedImages[i];
-    const imgData = await fileToDataURL(file);
-    const img = new Image();
-    img.src = imgData;
-    await new Promise((res) => (img.onload = res));
-
-    const pageWidth = doc.internal.pageSize.getWidth();
-    const pageHeight = doc.internal.pageSize.getHeight();
-
-    let width = pageWidth,
-      height = pageHeight;
-    const imgAspect = img.width / img.height;
-    const pageAspect = pageWidth / pageHeight;
-
-    if (imgAspect > pageAspect) {
-      height = pageWidth / imgAspect;
-    } else {
-      width = pageHeight * imgAspect;
+imagePreviewContainer[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x330),
+  function (_0x58f974) {
+    const _0x47955f = _0x14a98f,
+      _0x19ffb2 = {
+        oPasb: _0x47955f(0x3e8) + _0x47955f(0x3a7),
+        QLOhS: function (_0x4aa9e0, _0x8383ec) {
+          return _0x4aa9e0(_0x8383ec);
+        },
+        rVdyx: _0x47955f(0x2c9),
+        EAzNh: function (_0x282f90) {
+          return _0x282f90();
+        },
+      };
+    if (
+      _0x58f974[_0x47955f(0x303)][_0x47955f(0x41f)][_0x47955f(0x340)](
+        _0x19ffb2[_0x47955f(0x228)]
+      )
+    ) {
+      const _0x34cf45 = _0x19ffb2[_0x47955f(0x480)](
+        parseInt,
+        _0x58f974[_0x47955f(0x303)][_0x47955f(0x419) + "te"](
+          _0x19ffb2[_0x47955f(0x3ba)]
+        )
+      );
+      selectedImages[_0x47955f(0x327)](
+        _0x34cf45,
+        0x1 * 0x1f1b + -0x1403 + -0xb17
+      ),
+        _0x19ffb2[_0x47955f(0x318)](renderImagePreviews),
+        (imageInput[_0x47955f(0x45e)] = "");
     }
-
-    const x = (pageWidth - width) / 2;
-    const y = (pageHeight - height) / 2;
-
-    doc.addPage();
-    doc.addImage(imgData, "JPEG", x, y, width, height);
   }
-
-  doc.deletePage(1);
-  doc.save(`${title}.pdf`);
-}
-
-function fileToDataURL(file) {
-  return new Promise((resolve) => {
-    const reader = new FileReader();
-    reader.onload = (e) => resolve(e.target.result);
-    reader.readAsDataURL(file);
-  });
-}
-
-// === Notes Maker Input Validation ===
-imageInput.addEventListener("change", function () {
-  const invalid = Array.from(this.files).some(
-    (file) => !file.type.startsWith("image/")
-  );
-  if (invalid) {
-    alert("Please select only valid image files.");
-    this.value = "";
-    selectedImages = [];
-    renderImagePreviews();
-  }
-});
-
-document.getElementById("title").addEventListener("input", function () {
-  this.value = this.value.replace(/[^a-zA-Z0-9\s]/g, "");
-});
-document.getElementById("content").addEventListener("input", function () {
-  this.value = this.value.replace(/[^a-zA-Z0-9\s.,!?]/g, "");
-});
-
-document.getElementById("generateBtn").addEventListener("click", generatePDF);
-
-function toggleTheme() {
-  document.body.classList.toggle("dark");
-  const theme = document.body.classList.contains("dark") ? "dark" : "light";
-  localStorage.setItem("theme", theme);
-}
-
-// === PDF TO IMAGE CONVERTER ===
-const pdfImageInput = document.getElementById("pdfImageInput");
-const convertPdfToImageBtn = document.getElementById("convertPdfToImageBtn");
-const pdfImageOutput = document.getElementById("pdfImageOutput");
-const downloadImageZipBtn = document.getElementById("downloadImageZipBtn");
-
-pdfjsLib.GlobalWorkerOptions.workerSrc =
-  "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.worker.min.js";
-
-convertPdfToImageBtn.addEventListener("click", async () => {
-  const file = pdfImageInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
-  }
-
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-  pdfImageOutput.innerHTML = "";
-  const imageUrls = [];
-
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const scale = 2;
-    const viewport = page.getViewport({ scale });
-
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    await page.render({ canvasContext: context, viewport }).promise;
-
-    const imgData = canvas.toDataURL("image/png");
-    imageUrls.push({ url: imgData, name: `page-${i}.png` });
-
-    const img = document.createElement("img");
-    img.src = imgData;
-    img.alt = `Page ${i}`;
-    img.style.maxWidth = "100%";
-    img.style.marginBottom = "10px";
-    pdfImageOutput.appendChild(img);
-  }
-
-  downloadImageZipBtn.onclick = () => downloadImagesAsZip(imageUrls);
-  downloadImageZipBtn.style.display = "inline-block";
-});
-
-async function downloadImagesAsZip(images) {
-  const zip = new JSZip();
-  images.forEach((img) => {
-    const base64Data = img.url.split("base64,")[1];
-    zip.file(img.name, base64Data, { base64: true });
-  });
-
-  const blob = await zip.generateAsync({ type: "blob" });
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download = "pdf_images.zip";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-}
-
-// === Add Clear Button Logic ===
-const clearImageInputBtn = document.getElementById("clearImageInputBtn");
-const clearDocInputBtn = document.getElementById("clearDocInputBtn");
-const pdfDocInput = document.getElementById("pdfDocInput");
-
-pdfImageInput.addEventListener("change", () => {
-  clearImageInputBtn.style.display =
-    pdfImageInput.files.length > 0 ? "inline-block" : "none";
-});
-clearImageInputBtn.addEventListener("click", () => {
-  pdfImageInput.value = "";
-  clearImageInputBtn.style.display = "none";
-  pdfImageOutput.innerHTML = "";
-  downloadImageZipBtn.style.display = "none";
-});
-
-pdfDocInput.addEventListener("change", () => {
-  clearDocInputBtn.style.display =
-    pdfDocInput.files.length > 0 ? "inline-block" : "none";
-});
-clearDocInputBtn.addEventListener("click", () => {
-  pdfDocInput.value = "";
-  clearDocInputBtn.style.display = "none";
-  document.getElementById("pdfDocOutput").innerHTML = "";
-});
-
-// === PDF TO DOC CONVERTER ===
-const convertPdfToDocBtn = document.getElementById("convertPdfToDocBtn");
-const pdfDocOutput = document.getElementById("pdfDocOutput");
-const downloadDocBtn = document.getElementById("downloadDocBtn");
-
-let docTextContent = "";
-let currentDocFile = null;
-
-// Convert PDF to DOC (extract text and preview)
-convertPdfToDocBtn.addEventListener("click", async () => {
-  const file = pdfDocInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
-  }
-
-  currentDocFile = file;
-
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-  docTextContent = "";
-  pdfDocOutput.innerHTML = "";
-
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const content = await page.getTextContent();
-    const strings = content.items.map((item) => item.str).join(" ");
-    docTextContent += `Page ${i}:\n${strings}\n\n`;
-  }
-
-  // Show preview
-  const preview = document.createElement("pre");
-  preview.textContent = docTextContent.substring(0, 3000) + "\n...\n"; // limit preview
-  preview.className = "doc-preview";
-  pdfDocOutput.appendChild(preview);
-
-  // Add remove button
-  const removeBtn = document.createElement("button");
-  removeBtn.textContent = "❌";
-  removeBtn.className = "remove-pdf-btn";
-  removeBtn.onclick = () => {
-    pdfDocInput.value = "";
-    pdfDocOutput.innerHTML = "";
-    docTextContent = "";
-    currentDocFile = null;
+);
+function _0x4378() {
+  const _0x50778f = [
+    "download",
+    "clearDocIn",
+    "doc-previe",
+    "<div\x20class",
+    "BFvpt",
+    "ect\x20only\x20v",
+    "YYbye",
+    "yVtkI",
+    "stener",
+    "XOtBs",
+    "rkMnu",
+    "ontainer\x22>",
+    "caAhH",
+    "ownload\x20ZI",
+    "qYysf",
+    "pdfCsvOutp",
+    "EcwKL",
+    "meta\x20chars",
+    "72CQwcsq",
+    "cbYjI",
+    "EAzNh",
+    "LdJFx",
+    "jax/libs/p",
+    "pdf_images",
+    "container\x20",
+    "Original\x20S",
+    "pageSize",
+    "yFiep",
+    "downloadTe",
+    "Rynyw",
+    "RxIWs",
+    "MLDWR",
+    "\x22margin-to",
+    "pre",
+    "xzbCH",
+    "splice",
+    "xuSFx",
+    "pdfEpubOut",
+    "imagePrevi",
+    ".0\x22\x20xmlns=",
+    "\x0a\x20\x20\x20\x20\x20\x20<te",
+    "GNZrQ",
+    "clearHtmlI",
+    "xnziU",
+    "click",
+    "maxWidth",
+    "clearJsonI",
+    "lass=\x22remo",
+    "TapUU",
+    "oad\x20a\x20vali",
+    "jbZpb",
+    "xhtml\x22\x20med",
+    "dmfPa",
+    "</p></sect",
+    "snCNB",
+    "toDataURL",
+    "100%",
+    "generateAs",
+    "OEBPS/cont",
+    "bold",
+    "contains",
+    "mtNOC",
+    "yZAlf",
+    "StBNr",
+    "\x20of\x20",
+    "converted.",
+    "kfCXo",
+    "setProduce",
+    "-btn",
+    "QWJJP",
+    "2|4|0|3|1",
+    "721Spayxq",
+    "CnMLV",
+    "downloadXm",
+    "ia-type=\x22a",
+    "epub-conte",
+    "3|5|1|2|4|",
+    "wpcrj",
+    "fier>\x0a\x20\x20</",
+    "en</dc:lan",
+    "yGvsn",
+    "GqEdM",
+    "downloadEp",
+    "sPreview",
+    "0|1|3|2|4",
+    "applicatio",
+    "ontainer.x",
+    "\x22\x20alt=\x22Ima",
+    "onload",
+    "getDocumen",
+    "STORE",
+    "rRbuE",
+    "rihox",
+    "jioNG",
+    "/xhtml+xml",
+    "lare.com/a",
+    "tn\x22\x20data-i",
+    "addImage",
+    "=\x22content.",
+    "\x20to\x20CSV...",
+    "\x0a...\x0a",
+    "ze:</b>\x20",
+    "pdfHtmlOut",
+    "1999/xhtml",
+    "remove-pdf",
+    "EAQGq",
+    "3|1|0|4|2",
+    "downloadJs",
+    "normal",
+    "rtical\x22>",
+    ".doc",
+    "pyKlh",
+    "pdfZipInpu",
+    "downloadHt",
+    "csv",
+    "CwrhX",
+    "xIPrY",
+    "setFontSiz",
+    "InputBtn",
+    "ge\x20",
+    "presentati",
+    "page-",
+    "ctURL",
+    "hymwr",
+    "les>\x0a\x20\x20\x20\x20<",
+    "ntent.",
+    "KemKJ",
+    "896557KZWRaL",
+    "otfiles>\x0a<",
+    "internal",
+    "3|0|4|2|1",
+    "mlns:dc=\x22h",
+    "version=\x221",
+    "NNHXu",
+    "g...",
+    "WSwzd",
+    "filter",
+    "converted-",
+    "nxSRS",
+    "rQJYn",
+    "html\x20xmlns",
+    "jspdf",
+    "gxrSb",
+    "\x0a\x20\x20<rootfi",
+    "change",
+    "image-thum",
+    "YkHsi",
+    "aNrbt",
+    "alid\x20image",
+    "<div>Proce",
+    "\x20text...",
+    "Aqgqw",
+    "btuXa",
+    "\x22/>\x0a\x20\x20</ma",
+    "result",
+    "generateBt",
+    "NKWSD",
+    "3|2|1|4|0",
+    "essInputBt",
+    "trim",
+    "forEach",
+    "addEventLi",
+    "Jcnuv",
+    "ge-btn",
+    "cpygW",
+    "YLOLZ",
+    "787670UjCEqr",
+    "OLOib",
+    "putBtn",
+    "YCQBB",
+    "pdfTextInp",
+    "GlobalWork",
+    "ww.w3.org/",
+    "\x0a</html>",
+    "XOmcY",
+    "ToDocBtn",
+    "height",
+    "xUzib",
+    "n/msword",
+    "givMF",
+    "type",
+    "/container",
+    "rVdyx",
+    "join",
+    "QBGNq",
+    "xYgOD",
+    "fdIns",
+    "/dc:identi",
+    "ve-image-b",
+    "ion=\x221.0\x22\x20",
+    "addSlide",
+    "msBmi",
+    "=\x22pdf-page",
+    "ion>\x0a",
+    "style",
+    "ements/1.1",
+    "RohBp",
+    "ZydKF",
+    "er\x20both\x20ti",
+    "LAXLc",
+    "pdfXmlOutp",
+    "n/pdf",
+    "JPEG",
+    "le=\x22width:",
+    "\x22>\x0a\x20\x20\x20\x20\x20\x20\x20",
+    "img\x20src=\x22",
+    "EqOjU",
+    "pdfCsvInpu",
+    "getPage",
+    "DzIkw",
+    "downloadDo",
+    "marginBott",
+    "d\x20PDF\x20file",
+    "jZULj",
+    "jAjTx",
+    "Umfuj",
+    "ync",
+    "items",
+    "Compressio",
+    "UqRwe",
+    "message",
+    "10px",
+    ".zip",
+    "extracted.",
+    "createElem",
+    "encoding=\x22",
+    "downloadCo",
+    "ToImageBtn",
+    "remove-ima",
+    "idIuJ",
+    "nputBtn",
+    "fBGir",
+    "\x22/>\x0a\x20\x20</ro",
+    "lTEvv",
+    "\x0a\x20\x20\x20\x20\x20\x20\x20\x20<",
+    "\x20</spine>\x0a",
+    "content",
+    "\x22urn:oasis",
+    "MgABl",
+    "PDFDocumen",
+    "display",
+    "bJNge",
+    "nmFbJ",
+    "ToHtmlBtn",
+    "image",
+    "h2>Page\x20",
+    "mlBtn",
+    "base64,",
+    "tput",
+    "pdfEpubInp",
+    "clearXmlIn",
+    "zwmHd",
+    "text",
+    "cHUjt",
+    "htyhR",
+    "margin-top",
+    "deletePage",
+    "geHZy",
+    "ZznfB",
+    "gTVKN",
+    "EpaVt",
+    "from",
+    "getHeight",
+    "iv\x20class=\x22",
+    "LGsqB",
+    "xml",
+    "mber=\x22",
+    "tent",
+    "</p></div>",
+    "\x20<b>Size:<",
+    "njs.cloudf",
+    "vefuO",
+    "5260266kUzcxs",
+    "pdfHtmlInp",
+    "save",
+    "zDDCt",
+    "PGIVd",
+    "getAttribu",
+    "ewContaine",
+    "metadata>\x0a",
+    "pdfTextOut",
+    "startsWith",
+    ";resize:ve",
+    "classList",
+    "\x20\x20<itemref",
+    "readAsData",
+    "\x20<button\x20c",
+    "2483730tTBSOT",
+    "doc",
+    "vBtn",
+    "CvVMu",
+    "\x20to\x20JSON..",
+    "setTitle",
+    "rqcBL",
+    "n/epub+zip",
+    "uPOHs",
+    "theme",
+    "ight:120px",
+    "clearPptIn",
+    "</textarea",
+    "clearEpubI",
+    "c:title>Co",
+    "tle\x20and\x20co",
+    "Ready\x20to\x20d",
+    "<spine>\x0a\x20\x20",
+    "oezdK",
+    "clearCompr",
+    "th:100%;he",
+    "dUSmR",
+    "DJkUx",
+    "%\x0a\x20\x20\x20\x20",
+    "ed\x20PDF</ti",
+    "n/xml",
+    "ackage+xml",
+    "BUFyh",
+    "YehpT",
+    "Compressin",
+    "add",
+    "100%;heigh",
+    "compressPd",
+    "IvcAw",
+    "\x22><h2>Page",
+    "cBtn",
+    "xcjGb",
+    "t>\x0a\x20\x20\x20\x20<it",
+    "SkdEH",
+    "guage>\x0a\x20\x20\x20",
+    "DnuwD",
+    "META-INF/c",
+    "YqPnm",
+    "ihGph",
+    "BookId\x22>id",
+    "KayOT",
+    "epub",
+    "hecvo",
+    "oBOLn",
+    "stringify",
+    "F</dc:titl",
+    "ALgnx",
+    "SSnko",
+    ":names:tc:",
+    "tifier=\x22Bo",
+    "lBtn",
+    "mBdQe",
+    "igHmi",
+    ":pdf2epub<",
+    "value",
+    "VUALR",
+    "RFqUe",
+    "\x0a\x20\x20\x20\x20\x20\x20<b>",
+    ":10px\x22>",
+    "ion>",
+    "body",
+    "DARPY",
+    "url",
+    "pdfImageOu",
+    "Helvetica",
+    "className",
+    "xtarea\x20sty",
+    "cqEZt",
+    "<pdf>\x0a",
+    "str",
+    "pdfPptOutp",
+    "</package>",
+    "setKeyword",
+    "div",
+    "pdf-conten",
+    "\x20\x20\x20\x20<text>",
+    "nt\x22\x20style=",
+    "package\x20ve",
+    "ById",
+    "render",
+    "arrayBuffe",
+    "style=\x22wid",
+    "dvNeo",
+    "json",
+    "addPage",
+    "on/oebps-p",
+    "weuyK",
+    "ovyEM",
+    "QLOhS",
+    "n/json",
+    "\x20to\x20HTML..",
+    "ToCsvBtn",
+    "onclick",
+    "clearTextI",
+    "<textarea\x20",
+    "ftlcp",
+    "\x22>\x0a\x20\x20<head",
+    "uxKvj",
+    "pdfPptInpu",
+    "zPKuk",
+    "</div>\x0a\x20\x20\x20",
+    "FJADV",
+    "\x20\x20\x20\x20<b>Red",
+    "&lt;",
+    "fvehc",
+    "setSubject",
+    "pGlIl",
+    "getElement",
+    "phTWV",
+    "</pdf>",
+    "uction:</b",
+    "ffjwx",
+    "WYAfG",
+    "n\x20failed:\x20",
+    "iNsMB",
+    "wmgSS",
+    "pdfDocOutp",
+    "substring",
+    "pressed\x20Si",
+    "toggle",
+    "html",
+    "ToJsonBtn",
+    "tBtn",
+    "649754bvueqz",
+    "ShmuQ",
+    "nGIbD",
+    "/>\x0a\x20\x20</hea",
+    "\x20to\x20ZIP...",
+    "okId\x22>\x0a\x20\x20<",
+    "edia-type=",
+    "tent\x22\x20href",
+    ">\x0a\x20\x20\x20\x20\x20\x20<d",
+    "\x20files.",
+    "t\x22\x20style=\x22",
+    "PqQyp",
+    "removeChil",
+    "getViewpor",
+    "button",
+    "Converting",
+    "uPDdp",
+    "push",
+    "light",
+    "ToEpubBtn",
+    "FuuCQ",
+    "le>Convert",
+    "src",
+    "ageZipBtn",
+    "size",
+    "revokeObje",
+    "pflHw",
+    "\x20<dc:ident",
+    "remove",
+    "pdfImageIn",
+    "/b>\x20",
+    "RorXO",
+    ".pdf",
+    "lBUgR",
+    "name",
+    "XFsnW",
+    "/\x22>\x0a\x20\x20\x20\x20<d",
+    ".org/dc/el",
+    "taCmU",
+    "4|0|3|1|2",
+    "nverted\x20PD",
+    "DReUD",
+    "sBVxq",
+    "lcbKS",
+    "\x22>\x0a",
+    "\x20\x20\x20",
+    "ppmZQ",
+    ".png",
+    "fwZxb",
+    "numPages",
+    "eTvDt",
+    "erOptions",
+    "upfJW",
+    "sQcQu",
+    "p:10px\x22>",
+    "file",
+    "lUQTq",
+    "TWtUW",
+    "cwPIM",
+    "on.pptx",
+    "downloadPp",
+    "downloadIm",
+    "\x22>&times;<",
+    "textConten",
+    "replace",
+    "oPasb",
+    "e>\x0a\x20\x20\x20\x20<dc",
+    "image/",
+    "nDate",
+    "ToTextBtn",
+    "pZeqV",
+    "ent.xhtml",
+    "dark",
+    "ttp://purl",
+    "VnxtT",
+    "Please\x20upl",
+    "rsion=\x222.0",
+    "pdfZipOutp",
+    "alt",
+    "NUpHt",
+    "\x20to\x20EPUB..",
+    "setCreatio",
+    "setCreator",
+    "hyQZp",
+    "PpPdL",
+    "RjbBZ",
+    "UKRfZ",
+    "pyeXu",
+    "VfGdC",
+    "sOutput",
+    "VWldM",
+    "\x20\x20<page\x20nu",
+    ":language>",
+    "dVKel",
+    "tle>\x0a\x20\x20\x20\x20<",
+    "ECvek",
+    "</div>",
+    "sCdrJ",
+    "eXVbm",
+    "\x20idref=\x22co",
+    "ENfdj",
+    "eUMHc",
+    "\x0a\x20\x20</body>",
+    "CWHAT",
+    "ent",
+    "text/plain",
+    "innerHTML",
+    "t:180px\x22>",
+    "ent.opf\x22\x20m",
+    "YdWYb",
+    "writeFile",
+    "WkMXU",
+    "\x20to\x20XML...",
+    "img",
+    "pdfCompres",
+    "nique-iden",
+    "et=\x22UTF-8\x22",
+    "vCjbZ",
+    "metadata\x20x",
+    "iOyCh",
+    "rootfile\x20f",
+    "ubBtn",
+    "title",
+    "dx=\x22",
+    "rker.min.j",
+    "zip",
+    "xtBtn",
+    "\x22applicati",
+    "\x20KB<br>\x0a\x20\x20",
+    "URL",
+    "pdfJsonInp",
+    "iqgud",
+    "downloadZi",
+    "IceAA",
+    "GpoRh",
+    "RnAFj",
+    "clearCsvIn",
+    "Selected:<",
+    "zDKaN",
+    "hPAPB",
+    "YIAoN",
+    "56988ePtylB",
+    "UTF-8\x22?>\x0a<",
+    "DMzPg",
+    "setItem",
+    "/button>\x0a\x20",
+    "df.js/3.4.",
+    "xeTfF",
+    "pdfXmlInpu",
+    "downloadCs",
+    "zYWIb",
+    "YBnOe",
+    "sInput",
+    "createObje",
+    "ZoGNw",
+    "\x22\x20xmlns=\x22h",
+    "compressed",
+    "Please\x20sel",
+    "getContext",
+    "put",
+    "KivzV",
+    "AVjzn",
+    "getWidth",
+    "LLNsi",
+    "pdfJsonOut",
+    "getTextCon",
+    "<section><",
+    "hwqFS",
+    "workerSrc",
+    "cJSdH",
+    "ToPptBtn",
+    "uoMBL",
+    "canvas",
+    "\x20\x20</page>\x0a",
+    "then",
+    "WcVgt",
+    "JBOPO",
+    "SnlqC",
+    "EXYla",
+    "mpressedPd",
+    "PeJCc",
+    "mimetype",
+    "lVFWh",
+    "text/html",
+    "em\x20id=\x22con",
+    "zgmHF",
+    "https://cd",
+    "zkuIf",
+    "ssed\x20page\x20",
+    "</text>\x0a",
+    "clearZipIn",
+    "nJfPy",
+    "map",
+    "convertPdf",
+    "\x20\x20\x20\x20\x20",
+    "DUzqD",
+    "&gt;",
+    "load",
+    "inline-blo",
+    "txt",
+    "MMQdI",
+    "promise",
+    "IxCVg",
+    "NZJlM",
+    "setFont",
+    "none",
+    "href",
+    "ToZipBtn",
+    "LyYHH",
+    "vlgjG",
+    "opendocume",
+    "MxnuR",
+    "120/pdf.wo",
+    "toFixed",
+    "0|3|1|4|2",
+    "</h2><p>",
+    "ent.opf",
+    "Extracting",
+    "BNkry",
+    "ize:</b>\x20",
+    "some",
+    "007/opf\x22\x20u",
+    "YDZJW",
+    "appendChil",
+    "ntent\x22/>\x0a\x20",
+    ">\x0a\x20\x20\x20\x20",
+    "data-idx",
+    "input",
+    "ACtuH",
+    "WiNVy",
+    "onBtn",
+    "d>\x0a\x20\x20<body",
+    "70424qSWIFQ",
+    "CSMEr",
+    "\x20MB\x0a\x20\x20\x20\x20",
+    "\x20\x20\x20\x20<b>Com",
+    "PLaZl",
+    "setModific",
+    "files",
+    "IwrPp",
+    "QCMMt",
+    "text/csv",
+    "clearImage",
+    ">\x0a\x20\x20\x20\x20<tit",
+    "LQzwp",
+    "split",
+    "fBtn",
+    "IJfjX",
+    "image/png",
+    "HLwDM",
+    "pBtn",
+    "NPsiU",
+    "pplication",
+    "width",
+    "pdfDocInpu",
+    "=\x22http://w",
+    "length",
+    "ull-path=\x22",
+    "SLyQP",
+    "azPFt",
+    "kFXEH",
+    "getItem",
+    "nsnye",
+    "LrcnW",
+    "<br>\x0a\x20\x20\x20\x20\x20",
+    "nifest>\x0a\x20\x20",
+    "Page\x20",
+    "Please\x20ent",
+    "idpf.org/2",
+    "setAuthor",
+    "ationDate",
+    "szoBy",
+    "WBqbe",
+    "Zhkxy",
+    "vqlLa",
+    "ifier\x20id=\x22",
+    "ttp://www.",
+    "blob",
+    "shNEA",
+    "<?xml\x20vers",
+    "fByye",
+    "nt:xmlns:c",
+    "\x20\x20<manifes",
+    "ToXmlBtn",
+    "target",
+  ];
+  _0x4378 = function () {
+    return _0x50778f;
   };
-  pdfDocOutput.appendChild(removeBtn);
-
-  downloadDocBtn.style.display = "inline-block";
-});
-
-// Download DOC (text content saved as .doc file)
-downloadDocBtn.addEventListener("click", () => {
-  if (!docTextContent) return;
-  const blob = new Blob([docTextContent], { type: "application/msword" });
-  const link = document.createElement("a");
-  link.href = URL.createObjectURL(blob);
-  link.download =
-    currentDocFile?.name.replace(/\.pdf$/, ".doc") || "converted.doc";
-  document.body.appendChild(link);
-  link.click();
-  document.body.removeChild(link);
-});
-
-//========= PDF INTO PPTX JAVASCRIPT FUNCTIONALITY=================
-const pdfPptInput = document.getElementById("pdfPptInput");
-const convertPdfToPptBtn = document.getElementById("convertPdfToPptBtn");
-const pdfPptOutput = document.getElementById("pdfPptOutput"); 
-const downloadPptBtn = document.getElementById("downloadPptBtn");
-const clearPptInputBtn = document.getElementById("clearPptInputBtn");
-
-let pptx = new PptxGenJS();
-let pptPages = [];
-
-// Show/hide clear button for PPT input
-pdfPptInput.addEventListener("change", function () {
-  clearPptInputBtn.style.display =
-    this.files.length > 0 ? "inline-block" : "none";
-});
-
-// Clear PPT input and output
-clearPptInputBtn.addEventListener("click", function () {
-  pdfPptInput.value = "";
-  clearPptInputBtn.style.display = "none";
-  pdfPptOutput.innerHTML = "";
-  downloadPptBtn.style.display = "none";
-});
-
-convertPdfToPptBtn.addEventListener("click", async () => {
-  const file = pdfPptInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
+  return _0x4378();
+}
+async function generatePDF() {
+  const _0x4918e1 = _0x14a98f,
+    _0x2f6d15 = {
+      DJkUx: _0x4918e1(0x261),
+      nJfPy: _0x4918e1(0x3f0),
+      YLOLZ: function (_0x25eb16, _0x4aaa74) {
+        return _0x25eb16 || _0x4aaa74;
+      },
+      Zhkxy: function (_0x590d0a, _0x2120bf) {
+        return _0x590d0a(_0x2120bf);
+      },
+      rqcBL:
+        _0x4918e1(0x2f2) +
+        _0x4918e1(0x3ca) +
+        _0x4918e1(0x432) +
+        _0x4918e1(0x381),
+      WSwzd: _0x4918e1(0x468),
+      hwqFS: _0x4918e1(0x33f),
+      YBnOe: _0x4918e1(0x370),
+      ZznfB: function (_0x3cc990, _0x431a69) {
+        return _0x3cc990 === _0x431a69;
+      },
+      xIPrY: function (_0x40c48a, _0x4961a8) {
+        return _0x40c48a < _0x4961a8;
+      },
+      CSMEr: function (_0x35be1d, _0x3c7e71) {
+        return _0x35be1d(_0x3c7e71);
+      },
+      ENfdj: function (_0x2c23a3, _0x526325) {
+        return _0x2c23a3 / _0x526325;
+      },
+      nGIbD: function (_0x48e078, _0x2f0564) {
+        return _0x48e078 / _0x2f0564;
+      },
+      LAXLc: function (_0x379db5, _0x31faa3) {
+        return _0x379db5 > _0x31faa3;
+      },
+      PGIVd: function (_0x55864a, _0x174de5) {
+        return _0x55864a * _0x174de5;
+      },
+      EXYla: function (_0x5378f9, _0xa9175a) {
+        return _0x5378f9 / _0xa9175a;
+      },
+      WBqbe: function (_0x2fbd27, _0x4e0605) {
+        return _0x2fbd27 - _0x4e0605;
+      },
+      oezdK: _0x4918e1(0x3ce),
+    },
+    { jsPDF: _0x14f7ce } = window[_0x4918e1(0x391)],
+    _0x340e14 = new _0x14f7ce(),
+    _0x166ac5 = document[_0x4918e1(0x493) + _0x4918e1(0x476)](
+      _0x2f6d15[_0x4918e1(0x439)]
+    )[_0x4918e1(0x45e)][_0x4918e1(0x3a3)](),
+    _0x3a96f2 = document[_0x4918e1(0x493) + _0x4918e1(0x476)](
+      _0x2f6d15[_0x4918e1(0x2a6)]
+    )[_0x4918e1(0x45e)][_0x4918e1(0x3a3)]();
+  if (_0x2f6d15[_0x4918e1(0x3a9)](!_0x166ac5, !_0x3a96f2)) {
+    _0x2f6d15[_0x4918e1(0x2f8)](alert, _0x2f6d15[_0x4918e1(0x429)]);
     return;
   }
-
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-  pdfPptOutput.innerHTML = "";
-  pptx = new PptxGenJS(); // reset
+  _0x340e14[_0x4918e1(0x379) + "e"](0x2338 + -0x7f * 0x2c + -0xd52),
+    _0x340e14[_0x4918e1(0x2b3)](
+      _0x2f6d15[_0x4918e1(0x38b)],
+      _0x2f6d15[_0x4918e1(0x28e)]
+    ),
+    _0x340e14[_0x4918e1(0x400)](
+      _0x166ac5,
+      0x913 + -0x2 * -0x109c + -0x2a37,
+      -0x1055 + -0x2 * -0xb7 + -0x301 * -0x5
+    ),
+    _0x340e14[_0x4918e1(0x379) + "e"](-0x1 * 0x244d + -0x1ed5 + -0x1 * -0x432e),
+    _0x340e14[_0x4918e1(0x2b3)](
+      _0x2f6d15[_0x4918e1(0x38b)],
+      _0x2f6d15[_0x4918e1(0x27e)]
+    ),
+    _0x340e14[_0x4918e1(0x400)](
+      _0x3a96f2,
+      -0x1 * 0x1bc5 + 0xa22 + 0x11b7,
+      -0x99d * 0x1 + -0x15 * -0x141 + -0xf * 0x11a,
+      { maxWidth: 0xaa }
+    );
+  if (
+    _0x2f6d15[_0x4918e1(0x406)](
+      selectedImages[_0x4918e1(0x2e7)],
+      0x4 * 0x68b + -0x1945 + -0xe7
+    )
+  ) {
+    _0x340e14[_0x4918e1(0x416)](_0x166ac5 + _0x4918e1(0x207));
+    return;
+  }
+  for (
+    let _0x418218 = 0xfca + -0x1e8b + -0x1 * -0xec1;
+    _0x2f6d15[_0x4918e1(0x378)](_0x418218, selectedImages[_0x4918e1(0x2e7)]);
+    _0x418218++
+  ) {
+    const _0x135341 = selectedImages[_0x418218],
+      _0x395f8f = await _0x2f6d15[_0x4918e1(0x2d0)](fileToDataURL, _0x135341),
+      _0x2a114d = new Image();
+    (_0x2a114d[_0x4918e1(0x1fd)] = _0x395f8f),
+      await new Promise(
+        (_0x2a3853) => (_0x2a114d[_0x4918e1(0x35c)] = _0x2a3853)
+      );
+    const _0x2649c5 =
+        _0x340e14[_0x4918e1(0x385)][_0x4918e1(0x31e)][_0x4918e1(0x289)](),
+      _0x3ad237 =
+        _0x340e14[_0x4918e1(0x385)][_0x4918e1(0x31e)][_0x4918e1(0x40a)]();
+    let _0x31fadb = _0x2649c5,
+      _0x58fb62 = _0x3ad237;
+    const _0x326c71 = _0x2f6d15[_0x4918e1(0x24b)](
+        _0x2a114d[_0x4918e1(0x2e4)],
+        _0x2a114d[_0x4918e1(0x3b4)]
+      ),
+      _0x5de904 = _0x2f6d15[_0x4918e1(0x4a5)](_0x2649c5, _0x3ad237);
+    _0x2f6d15[_0x4918e1(0x3cb)](_0x326c71, _0x5de904)
+      ? (_0x58fb62 = _0x2f6d15[_0x4918e1(0x24b)](_0x2649c5, _0x326c71))
+      : (_0x31fadb = _0x2f6d15[_0x4918e1(0x418)](_0x3ad237, _0x326c71));
+    const _0x23f4fe = _0x2f6d15[_0x4918e1(0x299)](
+        _0x2f6d15[_0x4918e1(0x2f7)](_0x2649c5, _0x31fadb),
+        -0x185a + 0x1846 + -0x1 * -0x16
+      ),
+      _0x3506ad = _0x2f6d15[_0x4918e1(0x4a5)](
+        _0x2f6d15[_0x4918e1(0x2f7)](_0x3ad237, _0x58fb62),
+        0x1b11 + -0x79 * -0x4d + -0x3f74
+      );
+    _0x340e14[_0x4918e1(0x47c)](),
+      _0x340e14[_0x4918e1(0x365)](
+        _0x395f8f,
+        _0x2f6d15[_0x4918e1(0x435)],
+        _0x23f4fe,
+        _0x3506ad,
+        _0x31fadb,
+        _0x58fb62
+      );
+  }
+  _0x340e14[_0x4918e1(0x404)](-0x42e + 0x1e2e + -0x19ff * 0x1),
+    _0x340e14[_0x4918e1(0x416)](_0x166ac5 + _0x4918e1(0x207));
+}
+function fileToDataURL(_0x50b730) {
+  return new Promise((_0x3c42fe) => {
+    const _0x153494 = _0x3257,
+      _0x2e8045 = new FileReader();
+    (_0x2e8045[_0x153494(0x35c)] = (_0x39a627) =>
+      _0x3c42fe(_0x39a627[_0x153494(0x303)][_0x153494(0x39e)])),
+      _0x2e8045[_0x153494(0x421) + _0x153494(0x268)](_0x50b730);
+  });
+}
+imageInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), function () {
+  const _0x14999e = _0x14a98f,
+    _0x43fe76 = {
+      QWJJP: function (_0x119d14, _0xcd7d03) {
+        return _0x119d14(_0xcd7d03);
+      },
+      dUSmR:
+        _0x14999e(0x284) +
+        _0x14999e(0x309) +
+        _0x14999e(0x398) +
+        _0x14999e(0x1f0),
+      zkuIf: function (_0x54a53b) {
+        return _0x54a53b();
+      },
+    },
+    _0x2ee5ad = Array[_0x14999e(0x409)](this[_0x14999e(0x2d5)])[
+      _0x14999e(0x2c3)
+    ](
+      (_0x14de60) =>
+        !_0x14de60[_0x14999e(0x3b8)][_0x14999e(0x41d)](_0x14999e(0x22a))
+    );
+  _0x2ee5ad &&
+    (_0x43fe76[_0x14999e(0x349)](alert, _0x43fe76[_0x14999e(0x438)]),
+    (this[_0x14999e(0x45e)] = ""),
+    (selectedImages = []),
+    _0x43fe76[_0x14999e(0x2a2)](renderImagePreviews));
+}),
+  document[_0x14a98f(0x493) + _0x14a98f(0x476)](_0x14a98f(0x261))[
+    _0x14a98f(0x3a5) + _0x14a98f(0x30c)
+  ](_0x14a98f(0x2ca), function () {
+    const _0x32ea83 = _0x14a98f;
+    this[_0x32ea83(0x45e)] = this[_0x32ea83(0x45e)][_0x32ea83(0x227)](
+      /[^a-zA-Z0-9\s]/g,
+      ""
+    );
+  }),
+  document[_0x14a98f(0x493) + _0x14a98f(0x476)](_0x14a98f(0x3f0))[
+    _0x14a98f(0x3a5) + _0x14a98f(0x30c)
+  ](_0x14a98f(0x2ca), function () {
+    const _0x1125a0 = _0x14a98f;
+    this[_0x1125a0(0x45e)] = this[_0x1125a0(0x45e)][_0x1125a0(0x227)](
+      /[^a-zA-Z0-9\s.,!?]/g,
+      ""
+    );
+  }),
+  document[_0x14a98f(0x493) + _0x14a98f(0x476)](_0x14a98f(0x39f) + "n")[
+    _0x14a98f(0x3a5) + _0x14a98f(0x30c)
+  ](_0x14a98f(0x330), generatePDF);
+function toggleTheme() {
+  const _0x269ca3 = _0x14a98f,
+    _0x2f4d18 = {
+      XOmcY: _0x269ca3(0x22f),
+      GqEdM: _0x269ca3(0x1f9),
+      DnuwD: _0x269ca3(0x42c),
+    };
+  document[_0x269ca3(0x464)][_0x269ca3(0x41f)][_0x269ca3(0x49f)](
+    _0x2f4d18[_0x269ca3(0x3b2)]
+  );
+  const _0x1fc2f1 = document[_0x269ca3(0x464)][_0x269ca3(0x41f)][
+    _0x269ca3(0x340)
+  ](_0x2f4d18[_0x269ca3(0x3b2)])
+    ? _0x2f4d18[_0x269ca3(0x3b2)]
+    : _0x2f4d18[_0x269ca3(0x355)];
+  localStorage[_0x269ca3(0x277)](_0x2f4d18[_0x269ca3(0x44b)], _0x1fc2f1);
+}
+const pdfImageInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x204) + _0x14a98f(0x286)
+  ),
+  convertPdfToImageBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x3e7)
+  ),
+  pdfImageOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x467) + _0x14a98f(0x3fc)
+  ),
+  downloadImageZipBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x224) + _0x14a98f(0x1fe)
+  );
+(pdfjsLib[_0x14a98f(0x3af) + _0x14a98f(0x21a)][_0x14a98f(0x28f)] =
+  _0x14a98f(0x2a1) +
+  _0x14a98f(0x412) +
+  _0x14a98f(0x363) +
+  _0x14a98f(0x31a) +
+  _0x14a98f(0x279) +
+  _0x14a98f(0x2bb) +
+  _0x14a98f(0x263) +
+  "s"),
+  convertPdfToImageBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x44a263 = _0x14a98f,
+        _0xf443f0 = {
+          ECvek: function (_0x4630e2, _0x4325ee) {
+            return _0x4630e2 !== _0x4325ee;
+          },
+          xeTfF: _0x44a263(0x359) + _0x44a263(0x3cd),
+          nxSRS: function (_0x246f35, _0x3bddc3) {
+            return _0x246f35(_0x3bddc3);
+          },
+          ppmZQ: _0x44a263(0x232) + _0x44a263(0x335) + _0x44a263(0x3d8) + ".",
+          aNrbt: function (_0x69d061, _0x2ba65f) {
+            return _0x69d061 <= _0x2ba65f;
+          },
+          DzIkw: _0x44a263(0x293),
+          MMQdI: _0x44a263(0x2df),
+          qYysf: _0x44a263(0x258),
+          YqPnm: _0x44a263(0x33c),
+          RFqUe: _0x44a263(0x3e1),
+          xYgOD: _0x44a263(0x2ad) + "ck",
+        },
+        _0x5a0dff =
+          pdfImageInput[_0x44a263(0x2d5)][0x1 * -0x1643 + 0xa07 + 0xc3c];
+      if (
+        !_0x5a0dff ||
+        _0xf443f0[_0x44a263(0x246)](
+          _0x5a0dff[_0x44a263(0x3b8)],
+          _0xf443f0[_0x44a263(0x27a)]
+        )
+      ) {
+        _0xf443f0[_0x44a263(0x38e)](alert, _0xf443f0[_0x44a263(0x215)]);
+        return;
+      }
+      const _0x547018 = await _0x5a0dff[_0x44a263(0x478) + "r"](),
+        _0xe104eb = await pdfjsLib[_0x44a263(0x35d) + "t"]({ data: _0x547018 })[
+          _0x44a263(0x2b0)
+        ];
+      pdfImageOutput[_0x44a263(0x251)] = "";
+      const _0x478b3c = [];
+      for (
+        let _0x53718d = -0xee2 + 0xacf + 0x414;
+        _0xf443f0[_0x44a263(0x397)](_0x53718d, _0xe104eb[_0x44a263(0x218)]);
+        _0x53718d++
+      ) {
+        const _0x139c07 = await _0xe104eb[_0x44a263(0x3d4)](_0x53718d),
+          _0x1f91fb = 0x16b1 + 0x1123 + 0x2 * -0x13e9,
+          _0xae6098 = _0x139c07[_0x44a263(0x1f4) + "t"]({ scale: _0x1f91fb }),
+          _0x261ca8 = document[_0x44a263(0x3e4) + _0x44a263(0x24f)](
+            _0xf443f0[_0x44a263(0x3d5)]
+          ),
+          _0x1f23b2 = _0x261ca8[_0x44a263(0x285)]("2d");
+        (_0x261ca8[_0x44a263(0x3b4)] = _0xae6098[_0x44a263(0x3b4)]),
+          (_0x261ca8[_0x44a263(0x2e4)] = _0xae6098[_0x44a263(0x2e4)]),
+          await _0x139c07[_0x44a263(0x477)]({
+            canvasContext: _0x1f23b2,
+            viewport: _0xae6098,
+          })[_0x44a263(0x2b0)];
+        const _0x5bd157 = _0x261ca8[_0x44a263(0x33b)](
+          _0xf443f0[_0x44a263(0x2af)]
+        );
+        _0x478b3c[_0x44a263(0x1f8)]({
+          url: _0x5bd157,
+          name: _0x44a263(0x37d) + _0x53718d + _0x44a263(0x216),
+        });
+        const _0x475013 = document[_0x44a263(0x3e4) + _0x44a263(0x24f)](
+          _0xf443f0[_0x44a263(0x312)]
+        );
+        (_0x475013[_0x44a263(0x1fd)] = _0x5bd157),
+          (_0x475013[_0x44a263(0x235)] = _0x44a263(0x2f1) + _0x53718d),
+          (_0x475013[_0x44a263(0x3c6)][_0x44a263(0x331)] =
+            _0xf443f0[_0x44a263(0x44d)]),
+          (_0x475013[_0x44a263(0x3c6)][_0x44a263(0x3d7) + "om"] =
+            _0xf443f0[_0x44a263(0x460)]),
+          pdfImageOutput[_0x44a263(0x2c6) + "d"](_0x475013);
+      }
+      (downloadImageZipBtn[_0x44a263(0x484)] = () =>
+        downloadImagesAsZip(_0x478b3c)),
+        (downloadImageZipBtn[_0x44a263(0x3c6)][_0x44a263(0x3f4)] =
+          _0xf443f0[_0x44a263(0x3bd)]);
+    }
+  );
+async function downloadImagesAsZip(_0x1efd60) {
+  const _0x45ab5d = _0x14a98f,
+    _0x3b0bb5 = {
+      oBOLn: _0x45ab5d(0x3fb),
+      sCdrJ: _0x45ab5d(0x2fc),
+      pGlIl: _0x45ab5d(0x31b) + _0x45ab5d(0x3e2),
+    },
+    _0x2d1840 = new JSZip();
+  _0x1efd60[_0x45ab5d(0x3a4)]((_0x10c6d3) => {
+    const _0x36d4ad = _0x45ab5d,
+      _0x20e87a = _0x10c6d3[_0x36d4ad(0x466)][_0x36d4ad(0x2dc)](
+        _0x3b0bb5[_0x36d4ad(0x453)]
+      )[0x2655 + -0x1804 + -0xe50];
+    _0x2d1840[_0x36d4ad(0x21e)](_0x10c6d3[_0x36d4ad(0x209)], _0x20e87a, {
+      base64: !![],
+    });
+  });
+  const _0xbe7ddc = await _0x2d1840[_0x45ab5d(0x33d) + _0x45ab5d(0x3dc)]({
+      type: _0x3b0bb5[_0x45ab5d(0x248)],
+    }),
+    _0x404047 = document[_0x45ab5d(0x3e4) + _0x45ab5d(0x24f)]("a");
+  (_0x404047[_0x45ab5d(0x2b5)] =
+    URL[_0x45ab5d(0x280) + _0x45ab5d(0x37e)](_0xbe7ddc)),
+    (_0x404047[_0x45ab5d(0x304)] = _0x3b0bb5[_0x45ab5d(0x492)]),
+    document[_0x45ab5d(0x464)][_0x45ab5d(0x2c6) + "d"](_0x404047),
+    _0x404047[_0x45ab5d(0x330)](),
+    document[_0x45ab5d(0x464)][_0x45ab5d(0x1f3) + "d"](_0x404047);
+}
+const clearImageInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2d9) + _0x14a98f(0x37a)
+  ),
+  clearDocInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x305) + _0x14a98f(0x3ac)
+  ),
+  pdfDocInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2e5) + "t"
+  );
+pdfImageInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), () => {
+  const _0x2c64e0 = _0x14a98f,
+    _0x205273 = {
+      iOyCh: function (_0x5075dc, _0x2463ab) {
+        return _0x5075dc > _0x2463ab;
+      },
+      shNEA: _0x2c64e0(0x2ad) + "ck",
+      rkMnu: _0x2c64e0(0x2b4),
+    };
+  clearImageInputBtn[_0x2c64e0(0x3c6)][_0x2c64e0(0x3f4)] = _0x205273[
+    _0x2c64e0(0x25e)
+  ](
+    pdfImageInput[_0x2c64e0(0x2d5)][_0x2c64e0(0x2e7)],
+    0x111 * 0x22 + 0x1 * 0x1ce1 + -0x4123
+  )
+    ? _0x205273[_0x2c64e0(0x2fd)]
+    : _0x205273[_0x2c64e0(0x30e)];
+}),
+  clearImageInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    () => {
+      const _0x48890f = _0x14a98f,
+        _0x499e91 = { UKRfZ: _0x48890f(0x2b4) };
+      (pdfImageInput[_0x48890f(0x45e)] = ""),
+        (clearImageInputBtn[_0x48890f(0x3c6)][_0x48890f(0x3f4)] =
+          _0x499e91[_0x48890f(0x23d)]),
+        (pdfImageOutput[_0x48890f(0x251)] = ""),
+        (downloadImageZipBtn[_0x48890f(0x3c6)][_0x48890f(0x3f4)] =
+          _0x499e91[_0x48890f(0x23d)]);
+    }
+  ),
+  pdfDocInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), () => {
+    const _0x46446e = _0x14a98f,
+      _0x30b154 = {
+        hymwr: function (_0x3cea10, _0x204acc) {
+          return _0x3cea10 > _0x204acc;
+        },
+        KivzV: _0x46446e(0x2ad) + "ck",
+        szoBy: _0x46446e(0x2b4),
+      };
+    clearDocInputBtn[_0x46446e(0x3c6)][_0x46446e(0x3f4)] = _0x30b154[
+      _0x46446e(0x37f)
+    ](pdfDocInput[_0x46446e(0x2d5)][_0x46446e(0x2e7)], -0x1a22 + 0xdfe + 0xc24)
+      ? _0x30b154[_0x46446e(0x287)]
+      : _0x30b154[_0x46446e(0x2f6)];
+  }),
+  clearDocInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    () => {
+      const _0x2c0c67 = _0x14a98f,
+        _0x135262 = {
+          VUALR: _0x2c0c67(0x2b4),
+          zwmHd: _0x2c0c67(0x49c) + "ut",
+        };
+      (pdfDocInput[_0x2c0c67(0x45e)] = ""),
+        (clearDocInputBtn[_0x2c0c67(0x3c6)][_0x2c0c67(0x3f4)] =
+          _0x135262[_0x2c0c67(0x45f)]),
+        (document[_0x2c0c67(0x493) + _0x2c0c67(0x476)](
+          _0x135262[_0x2c0c67(0x3ff)]
+        )[_0x2c0c67(0x251)] = "");
+    }
+  );
+const convertPdfToDocBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x3b3)
+  ),
+  pdfDocOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x49c) + "ut"
+  ),
+  downloadDocBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3d6) + _0x14a98f(0x446)
+  );
+let docTextContent = "",
+  currentDocFile = null;
+convertPdfToDocBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x330),
+  async () => {
+    const _0x34f60e = _0x14a98f,
+      _0x31d8ac = {
+        IceAA: function (_0x1e9408, _0x4ff23b) {
+          return _0x1e9408 !== _0x4ff23b;
+        },
+        RorXO: _0x34f60e(0x359) + _0x34f60e(0x3cd),
+        LrcnW: function (_0x1b2487, _0xb244f4) {
+          return _0x1b2487(_0xb244f4);
+        },
+        PeJCc: _0x34f60e(0x232) + _0x34f60e(0x335) + _0x34f60e(0x3d8) + ".",
+        GNZrQ: function (_0x3f1db8, _0x2fef42) {
+          return _0x3f1db8 <= _0x2fef42;
+        },
+        DARPY: _0x34f60e(0x325),
+        AVjzn: function (_0x402f4d, _0x1697ac) {
+          return _0x402f4d + _0x1697ac;
+        },
+        ihGph: _0x34f60e(0x368),
+        azPFt: _0x34f60e(0x306) + "w",
+        wmgSS: _0x34f60e(0x1f5),
+        yVtkI: _0x34f60e(0x36c) + _0x34f60e(0x348),
+        givMF: _0x34f60e(0x2ad) + "ck",
+      },
+      _0x27cb92 =
+        pdfDocInput[_0x34f60e(0x2d5)][0x1 * -0x200b + 0x26ec + -0x1 * 0x6e1];
+    if (
+      !_0x27cb92 ||
+      _0x31d8ac[_0x34f60e(0x26c)](
+        _0x27cb92[_0x34f60e(0x3b8)],
+        _0x31d8ac[_0x34f60e(0x206)]
+      )
+    ) {
+      _0x31d8ac[_0x34f60e(0x2ee)](alert, _0x31d8ac[_0x34f60e(0x29b)]);
+      return;
+    }
+    currentDocFile = _0x27cb92;
+    const _0x3fd1f7 = await _0x27cb92[_0x34f60e(0x478) + "r"](),
+      _0x79420f = await pdfjsLib[_0x34f60e(0x35d) + "t"]({ data: _0x3fd1f7 })[
+        _0x34f60e(0x2b0)
+      ];
+    (docTextContent = ""), (pdfDocOutput[_0x34f60e(0x251)] = "");
+    for (
+      let _0x5d00d8 = -0x2 * -0x791 + -0xcac + -0x275;
+      _0x31d8ac[_0x34f60e(0x32d)](_0x5d00d8, _0x79420f[_0x34f60e(0x218)]);
+      _0x5d00d8++
+    ) {
+      const _0x2f49b1 = await _0x79420f[_0x34f60e(0x3d4)](_0x5d00d8),
+        _0x592a6f = await _0x2f49b1[_0x34f60e(0x28c) + _0x34f60e(0x40f)](),
+        _0x586e21 = _0x592a6f[_0x34f60e(0x3dd)]
+          [_0x34f60e(0x2a7)]((_0x4469ab) => _0x4469ab[_0x34f60e(0x46d)])
+          [_0x34f60e(0x3bb)]("\x20");
+      docTextContent +=
+        _0x34f60e(0x2f1) + _0x5d00d8 + ":\x0a" + _0x586e21 + "\x0a\x0a";
+    }
+    const _0x90517 = document[_0x34f60e(0x3e4) + _0x34f60e(0x24f)](
+      _0x31d8ac[_0x34f60e(0x465)]
+    );
+    (_0x90517[_0x34f60e(0x226) + "t"] = _0x31d8ac[_0x34f60e(0x288)](
+      docTextContent[_0x34f60e(0x49d)](
+        -0x1558 + -0xfb1 + 0x2509 * 0x1,
+        0xa6 * 0x27 + 0x9d * -0x31 + -0x107b * -0x1
+      ),
+      _0x31d8ac[_0x34f60e(0x44e)]
+    )),
+      (_0x90517[_0x34f60e(0x469)] = _0x31d8ac[_0x34f60e(0x2ea)]),
+      pdfDocOutput[_0x34f60e(0x2c6) + "d"](_0x90517);
+    const _0x4aacff = document[_0x34f60e(0x3e4) + _0x34f60e(0x24f)](
+      _0x31d8ac[_0x34f60e(0x49b)]
+    );
+    (_0x4aacff[_0x34f60e(0x226) + "t"] = "❌"),
+      (_0x4aacff[_0x34f60e(0x469)] = _0x31d8ac[_0x34f60e(0x30b)]),
+      (_0x4aacff[_0x34f60e(0x484)] = () => {
+        const _0x24af41 = _0x34f60e;
+        (pdfDocInput[_0x24af41(0x45e)] = ""),
+          (pdfDocOutput[_0x24af41(0x251)] = ""),
+          (docTextContent = ""),
+          (currentDocFile = null);
+      }),
+      pdfDocOutput[_0x34f60e(0x2c6) + "d"](_0x4aacff),
+      (downloadDocBtn[_0x34f60e(0x3c6)][_0x34f60e(0x3f4)] =
+        _0x31d8ac[_0x34f60e(0x3b7)]);
+  }
+),
+  downloadDocBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x531ef4 = _0x14a98f,
+      _0x467fa0 = {
+        IvcAw: _0x531ef4(0x359) + _0x531ef4(0x3b6),
+        SnlqC: _0x531ef4(0x372),
+        rRbuE: _0x531ef4(0x345) + _0x531ef4(0x424),
+      };
+    if (!docTextContent) return;
+    const _0x34c6ad = new Blob([docTextContent], {
+        type: _0x467fa0[_0x531ef4(0x444)],
+      }),
+      _0x155dca = document[_0x531ef4(0x3e4) + _0x531ef4(0x24f)]("a");
+    (_0x155dca[_0x531ef4(0x2b5)] =
+      URL[_0x531ef4(0x280) + _0x531ef4(0x37e)](_0x34c6ad)),
+      (_0x155dca[_0x531ef4(0x304)] =
+        currentDocFile?.[_0x531ef4(0x209)][_0x531ef4(0x227)](
+          /\.pdf$/,
+          _0x467fa0[_0x531ef4(0x298)]
+        ) || _0x467fa0[_0x531ef4(0x35f)]),
+      document[_0x531ef4(0x464)][_0x531ef4(0x2c6) + "d"](_0x155dca),
+      _0x155dca[_0x531ef4(0x330)](),
+      document[_0x531ef4(0x464)][_0x531ef4(0x1f3) + "d"](_0x155dca);
+  });
+const pdfPptInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x48a) + "t"
+  ),
+  convertPdfToPptBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x291)
+  ),
+  pdfPptOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x46e) + "ut"
+  ),
+  downloadPptBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x223) + _0x14a98f(0x4a2)
+  ),
+  clearPptInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x42e) + _0x14a98f(0x3ac)
+  );
+let pptx = new PptxGenJS(),
   pptPages = [];
-
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const viewport = page.getViewport({ scale: 2 });
-
-    const canvas = document.createElement("canvas");
-    const context = canvas.getContext("2d");
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    await page.render({ canvasContext: context, viewport }).promise;
-
-    const imgData = canvas.toDataURL("image/png");
-
-    const img = document.createElement("img");
-    img.src = imgData;
-    img.style.maxWidth = "100%";
-    img.style.marginBottom = "10px";
-    pdfPptOutput.appendChild(img);
-
-    // Add image as slide
-    const slide = pptx.addSlide();
-    slide.addImage({ data: imgData, x: 0, y: 0, w: 10, h: 5.6 }); // 10x5.6 inches = 16:9
+pdfPptInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), function () {
+  const _0x47d04c = _0x14a98f,
+    _0x9fc7c2 = {
+      zDDCt: function (_0x2dbf51, _0x104168) {
+        return _0x2dbf51 > _0x104168;
+      },
+      hPAPB: _0x47d04c(0x2ad) + "ck",
+      CWHAT: _0x47d04c(0x2b4),
+    };
+  clearPptInputBtn[_0x47d04c(0x3c6)][_0x47d04c(0x3f4)] = _0x9fc7c2[
+    _0x47d04c(0x417)
+  ](this[_0x47d04c(0x2d5)][_0x47d04c(0x2e7)], -0x5fa + -0x2 * -0x683 + -0x70c)
+    ? _0x9fc7c2[_0x47d04c(0x272)]
+    : _0x9fc7c2[_0x47d04c(0x24e)];
+}),
+  clearPptInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x4e1e9e = _0x14a98f,
+        _0x127631 = { BUFyh: _0x4e1e9e(0x2b4) };
+      (pdfPptInput[_0x4e1e9e(0x45e)] = ""),
+        (clearPptInputBtn[_0x4e1e9e(0x3c6)][_0x4e1e9e(0x3f4)] =
+          _0x127631[_0x4e1e9e(0x43e)]),
+        (pdfPptOutput[_0x4e1e9e(0x251)] = ""),
+        (downloadPptBtn[_0x4e1e9e(0x3c6)][_0x4e1e9e(0x3f4)] =
+          _0x127631[_0x4e1e9e(0x43e)]);
+    }
+  ),
+  convertPdfToPptBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x4bb744 = _0x14a98f,
+        _0x9fc95e = {
+          nsnye: function (_0x38ab04, _0x123292) {
+            return _0x38ab04 !== _0x123292;
+          },
+          sQcQu: _0x4bb744(0x359) + _0x4bb744(0x3cd),
+          CnMLV: function (_0x4792e9, _0x17d3a3) {
+            return _0x4792e9(_0x17d3a3);
+          },
+          XFsnW: _0x4bb744(0x232) + _0x4bb744(0x335) + _0x4bb744(0x3d8) + ".",
+          Aqgqw: function (_0x34d878, _0x3801d1) {
+            return _0x34d878 <= _0x3801d1;
+          },
+          IJfjX: _0x4bb744(0x293),
+          upfJW: _0x4bb744(0x2df),
+          pyeXu: _0x4bb744(0x258),
+          PpPdL: _0x4bb744(0x33c),
+          EqOjU: _0x4bb744(0x3e1),
+          SLyQP: _0x4bb744(0x2ad) + "ck",
+        },
+        _0x56b39b =
+          pdfPptInput[_0x4bb744(0x2d5)][0xc4f * 0x1 + 0x6d0 + -0x131f];
+      if (
+        !_0x56b39b ||
+        _0x9fc95e[_0x4bb744(0x2ed)](
+          _0x56b39b[_0x4bb744(0x3b8)],
+          _0x9fc95e[_0x4bb744(0x21c)]
+        )
+      ) {
+        _0x9fc95e[_0x4bb744(0x34c)](alert, _0x9fc95e[_0x4bb744(0x20a)]);
+        return;
+      }
+      const _0x7dd92b = await _0x56b39b[_0x4bb744(0x478) + "r"](),
+        _0x3bb338 = await pdfjsLib[_0x4bb744(0x35d) + "t"]({ data: _0x7dd92b })[
+          _0x4bb744(0x2b0)
+        ];
+      (pdfPptOutput[_0x4bb744(0x251)] = ""),
+        (pptx = new PptxGenJS()),
+        (pptPages = []);
+      for (
+        let _0x4a8f09 = -0x2523 + -0xa75 + 0x2f99;
+        _0x9fc95e[_0x4bb744(0x39b)](_0x4a8f09, _0x3bb338[_0x4bb744(0x218)]);
+        _0x4a8f09++
+      ) {
+        const _0x5b2ff2 = await _0x3bb338[_0x4bb744(0x3d4)](_0x4a8f09),
+          _0x1663e3 = _0x5b2ff2[_0x4bb744(0x1f4) + "t"]({ scale: 0x2 }),
+          _0x72cedf = document[_0x4bb744(0x3e4) + _0x4bb744(0x24f)](
+            _0x9fc95e[_0x4bb744(0x2de)]
+          ),
+          _0x5510b9 = _0x72cedf[_0x4bb744(0x285)]("2d");
+        (_0x72cedf[_0x4bb744(0x3b4)] = _0x1663e3[_0x4bb744(0x3b4)]),
+          (_0x72cedf[_0x4bb744(0x2e4)] = _0x1663e3[_0x4bb744(0x2e4)]),
+          await _0x5b2ff2[_0x4bb744(0x477)]({
+            canvasContext: _0x5510b9,
+            viewport: _0x1663e3,
+          })[_0x4bb744(0x2b0)];
+        const _0x12bb26 = _0x72cedf[_0x4bb744(0x33b)](
+            _0x9fc95e[_0x4bb744(0x21b)]
+          ),
+          _0x688f92 = document[_0x4bb744(0x3e4) + _0x4bb744(0x24f)](
+            _0x9fc95e[_0x4bb744(0x23e)]
+          );
+        (_0x688f92[_0x4bb744(0x1fd)] = _0x12bb26),
+          (_0x688f92[_0x4bb744(0x3c6)][_0x4bb744(0x331)] =
+            _0x9fc95e[_0x4bb744(0x23b)]),
+          (_0x688f92[_0x4bb744(0x3c6)][_0x4bb744(0x3d7) + "om"] =
+            _0x9fc95e[_0x4bb744(0x3d2)]),
+          pdfPptOutput[_0x4bb744(0x2c6) + "d"](_0x688f92);
+        const _0x18e23d = pptx[_0x4bb744(0x3c2)]();
+        _0x18e23d[_0x4bb744(0x365)]({
+          data: _0x12bb26,
+          x: 0x0,
+          y: 0x0,
+          w: 0xa,
+          h: 5.6,
+        });
+      }
+      downloadPptBtn[_0x4bb744(0x3c6)][_0x4bb744(0x3f4)] =
+        _0x9fc95e[_0x4bb744(0x2e9)];
+    }
+  ),
+  downloadPptBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x24c6ae = _0x14a98f,
+      _0x41752e = {
+        zYWIb: _0x24c6ae(0x38d) + _0x24c6ae(0x37c) + _0x24c6ae(0x222),
+      };
+    pptx[_0x24c6ae(0x255)](_0x41752e[_0x24c6ae(0x27d)]);
+  });
+const pdfCompressInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x259) + _0x14a98f(0x27f)
+  ),
+  clearCompressInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x436) + _0x14a98f(0x3a2) + "n"
+  ),
+  pdfCompressPreview = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x259) + _0x14a98f(0x357)
+  ),
+  compressPdfBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x443) + _0x14a98f(0x2dd)
+  ),
+  pdfCompressOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x259) + _0x14a98f(0x240)
+  ),
+  downloadCompressedPdfBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3e6) + _0x14a98f(0x29a) + _0x14a98f(0x2dd)
+  );
+let compressedBlob = null,
+  originalSize = 0x9 * 0x3df + 0x381 * 0x1 + -0x2658,
+  compressedSize = -0x8d3 * -0x2 + 0xf2 * -0x1 + -0x10b4;
+pdfCompressInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x394),
+  function () {
+    const _0x6e72fc = _0x14a98f,
+      _0x2ab6cf = {
+        jZULj: function (_0x545ada, _0x582136) {
+          return _0x545ada > _0x582136;
+        },
+        RjbBZ: _0x6e72fc(0x2ad) + "ck",
+        cHUjt: function (_0x49eb61, _0x2bfcd7) {
+          return _0x49eb61 / _0x2bfcd7;
+        },
+        lcbKS: function (_0x179a7d, _0x148bce) {
+          return _0x179a7d / _0x148bce;
+        },
+        phTWV: _0x6e72fc(0x2b4),
+      };
+    if (
+      _0x2ab6cf[_0x6e72fc(0x3d9)](
+        this[_0x6e72fc(0x2d5)][_0x6e72fc(0x2e7)],
+        -0x2710 + -0x6 * 0x472 + 0x41bc
+      )
+    ) {
+      clearCompressInputBtn[_0x6e72fc(0x3c6)][_0x6e72fc(0x3f4)] =
+        _0x2ab6cf[_0x6e72fc(0x23c)];
+      const _0x36fcbc =
+        this[_0x6e72fc(0x2d5)][0xc92 * -0x1 + -0x3 * -0x11d + 0x93b];
+      (originalSize = _0x36fcbc[_0x6e72fc(0x1ff)]),
+        (pdfCompressPreview[_0x6e72fc(0x251)] =
+          _0x6e72fc(0x461) +
+          _0x6e72fc(0x270) +
+          _0x6e72fc(0x205) +
+          _0x36fcbc[_0x6e72fc(0x209)] +
+          (_0x6e72fc(0x2ef) + _0x6e72fc(0x411) + _0x6e72fc(0x205)) +
+          _0x2ab6cf[_0x6e72fc(0x401)](
+            _0x2ab6cf[_0x6e72fc(0x212)](
+              _0x36fcbc[_0x6e72fc(0x1ff)],
+              -0x604 + 0x1e1 + -0x1 * -0x823
+            ),
+            -0x106f + 0x14ef + -0x10 * 0x8
+          )[_0x6e72fc(0x2bc)](0x1 * 0x23e3 + -0x305 * 0x6 + -0x11c3) +
+          _0x6e72fc(0x2d1)),
+        (pdfCompressOutput[_0x6e72fc(0x251)] = ""),
+        (downloadCompressedPdfBtn[_0x6e72fc(0x3c6)][_0x6e72fc(0x3f4)] =
+          _0x2ab6cf[_0x6e72fc(0x494)]);
+    } else
+      (clearCompressInputBtn[_0x6e72fc(0x3c6)][_0x6e72fc(0x3f4)] =
+        _0x2ab6cf[_0x6e72fc(0x494)]),
+        (pdfCompressPreview[_0x6e72fc(0x251)] = "");
   }
-
-  downloadPptBtn.style.display = "inline-block";
-});
-
-downloadPptBtn.addEventListener("click", () => {
-  pptx.writeFile("converted-presentation.pptx");
-});
-
-// ============PDF'S COMPRESSOR TOOL===================
-const pdfCompressInput = document.getElementById("pdfCompressInput");
-const clearCompressInputBtn = document.getElementById("clearCompressInputBtn");
-const pdfCompressPreview = document.getElementById("pdfCompressPreview");
-const compressPdfBtn = document.getElementById("compressPdfBtn");
-const pdfCompressOutput = document.getElementById("pdfCompressOutput");
-const downloadCompressedPdfBtn = document.getElementById("downloadCompressedPdfBtn");
-
-let compressedBlob = null;
-let originalSize = 0;
-let compressedSize = 0;
-
-// Show/hide clear button and preview file info
-pdfCompressInput.addEventListener("change", function () {
-  if (this.files.length > 0) {
-    clearCompressInputBtn.style.display = "inline-block";
-    const file = this.files[0];
-    originalSize = file.size;
-    pdfCompressPreview.innerHTML = `
-      <b>Selected:</b> ${file.name}<br>
-      <b>Size:</b> ${(file.size / 1024 / 1024).toFixed(2)} MB
-    `;
-    pdfCompressOutput.innerHTML = "";
-    downloadCompressedPdfBtn.style.display = "none";
-  } else {
-    clearCompressInputBtn.style.display = "none";
-    pdfCompressPreview.innerHTML = "";
-  }
-});
-
-// Clear input and output
-clearCompressInputBtn.addEventListener("click", function () {
-  pdfCompressInput.value = "";
-  clearCompressInputBtn.style.display = "none";
-  pdfCompressPreview.innerHTML = "";
-  pdfCompressOutput.innerHTML = "";
-  downloadCompressedPdfBtn.style.display = "none";
-  compressedBlob = null;
-});
-
-// Compress PDF
-compressPdfBtn.addEventListener("click", async () => {
-  const file = pdfCompressInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
-  }
-  pdfCompressOutput.innerHTML = "Compressing...";
-  try {
-    const arrayBuffer = await file.arrayBuffer();
-    const pdfDoc = await PDFLib.PDFDocument.load(arrayBuffer, { updateMetadata: true });
-    // Remove metadata (optional, can help reduce size)
-    pdfDoc.setTitle('');
-    pdfDoc.setAuthor('');
-    pdfDoc.setSubject('');
-    pdfDoc.setKeywords([]);
-    pdfDoc.setProducer('');
-    pdfDoc.setCreator('');
-    pdfDoc.setCreationDate(new Date());
-    pdfDoc.setModificationDate(new Date());
-
-    // Save as new PDF (this can reduce size by removing unused objects/metadata)
-    const compressedBytes = await pdfDoc.save({ useObjectStreams: true });
-    compressedBlob = new Blob([compressedBytes], { type: "application/pdf" });
-    compressedSize = compressedBlob.size;
-
-    pdfCompressOutput.innerHTML = `
-      <b>Original Size:</b> ${(originalSize / 1024).toFixed(1)} KB<br>
-      <b>Compressed Size:</b> ${(compressedSize / 1024).toFixed(1)} KB<br>
-      <b>Reduction:</b> ${((1 - compressedSize / originalSize) * 100).toFixed(1)}%
-    `;
-    downloadCompressedPdfBtn.style.display = "inline-block";
-  } catch (err) {
-    pdfCompressOutput.innerHTML = "Compression failed: " + err.message;
-    downloadCompressedPdfBtn.style.display = "none";
-  }
-});
-
-// Download compressed PDF
-downloadCompressedPdfBtn.addEventListener("click", () => {
-  if (!compressedBlob) return;
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(compressedBlob);
-  a.download = "compressed.pdf";
-  a.click();
-  setTimeout(() => URL.revokeObjectURL(a.href), 1000);
-});
-
-//===============PDF TO TEXT  CONVERTER=====================
-// === PDF TO TEXT CONVERTER ===
-const pdfTextInput = document.getElementById("pdfTextInput");
-const clearTextInputBtn = document.getElementById("clearTextInputBtn");
-const convertPdfToTextBtn = document.getElementById("convertPdfToTextBtn");
-const pdfTextOutput = document.getElementById("pdfTextOutput");
-const downloadTextBtn = document.getElementById("downloadTextBtn");
-
+),
+  clearCompressInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x247b62 = _0x14a98f,
+        _0xb7d36e = {
+          bJNge: _0x247b62(0x350) + "0",
+          taCmU: _0x247b62(0x2b4),
+        },
+        _0xd564ff = _0xb7d36e[_0x247b62(0x3f5)][_0x247b62(0x2dc)]("|");
+      let _0x98c8f4 = 0x1cf9 + 0x204 + -0x1efd;
+      while (!![]) {
+        switch (_0xd564ff[_0x98c8f4++]) {
+          case "0":
+            compressedBlob = null;
+            continue;
+          case "1":
+            pdfCompressPreview[_0x247b62(0x251)] = "";
+            continue;
+          case "2":
+            pdfCompressOutput[_0x247b62(0x251)] = "";
+            continue;
+          case "3":
+            pdfCompressInput[_0x247b62(0x45e)] = "";
+            continue;
+          case "4":
+            downloadCompressedPdfBtn[_0x247b62(0x3c6)][_0x247b62(0x3f4)] =
+              _0xb7d36e[_0x247b62(0x20d)];
+            continue;
+          case "5":
+            clearCompressInputBtn[_0x247b62(0x3c6)][_0x247b62(0x3f4)] =
+              _0xb7d36e[_0x247b62(0x20d)];
+            continue;
+        }
+        break;
+      }
+    }
+  ),
+  compressPdfBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0xdaaff1 = _0x14a98f,
+        _0x303490 = {
+          RohBp: function (_0x1e3a26, _0x2ff825) {
+            return _0x1e3a26 !== _0x2ff825;
+          },
+          ZydKF: _0xdaaff1(0x359) + _0xdaaff1(0x3cd),
+          yFiep: function (_0x5e4be9, _0x497a8c) {
+            return _0x5e4be9(_0x497a8c);
+          },
+          GpoRh: _0xdaaff1(0x232) + _0xdaaff1(0x335) + _0xdaaff1(0x3d8) + ".",
+          LLNsi: _0xdaaff1(0x440) + _0xdaaff1(0x38a),
+          fBGir: function (_0x4d4909, _0x116d99) {
+            return _0x4d4909 / _0x116d99;
+          },
+          RnAFj: function (_0x18d8c8, _0x277340) {
+            return _0x18d8c8 / _0x277340;
+          },
+          fvehc: function (_0x3326ba, _0x9080dd) {
+            return _0x3326ba * _0x9080dd;
+          },
+          DMzPg: function (_0x50ec70, _0x186de9) {
+            return _0x50ec70 - _0x186de9;
+          },
+          ACtuH: function (_0x1d4f6f, _0x3b1c8a) {
+            return _0x1d4f6f / _0x3b1c8a;
+          },
+          KemKJ: _0xdaaff1(0x2ad) + "ck",
+          ZoGNw: function (_0xa7c6c4, _0x7f52be) {
+            return _0xa7c6c4 + _0x7f52be;
+          },
+          ftlcp: _0xdaaff1(0x3de) + _0xdaaff1(0x499),
+          NZJlM: _0xdaaff1(0x2b4),
+        },
+        _0x3385f3 =
+          pdfCompressInput[_0xdaaff1(0x2d5)][
+            0x3c4 + -0x2e3 * 0xb + -0x599 * -0x5
+          ];
+      if (
+        !_0x3385f3 ||
+        _0x303490[_0xdaaff1(0x3c8)](
+          _0x3385f3[_0xdaaff1(0x3b8)],
+          _0x303490[_0xdaaff1(0x3c9)]
+        )
+      ) {
+        _0x303490[_0xdaaff1(0x31f)](alert, _0x303490[_0xdaaff1(0x26d)]);
+        return;
+      }
+      pdfCompressOutput[_0xdaaff1(0x251)] = _0x303490[_0xdaaff1(0x28a)];
+      try {
+        const _0x4f8ed1 = await _0x3385f3[_0xdaaff1(0x478) + "r"](),
+          _0x1e1577 = await PDFLib[_0xdaaff1(0x3f3) + "t"][_0xdaaff1(0x2ac)](
+            _0x4f8ed1,
+            { updateMetadata: !![] }
+          );
+        _0x1e1577[_0xdaaff1(0x428)](""),
+          _0x1e1577[_0xdaaff1(0x2f4)](""),
+          _0x1e1577[_0xdaaff1(0x491)](""),
+          _0x1e1577[_0xdaaff1(0x470) + "s"]([]),
+          _0x1e1577[_0xdaaff1(0x347) + "r"](""),
+          _0x1e1577[_0xdaaff1(0x239)](""),
+          _0x1e1577[_0xdaaff1(0x238) + _0xdaaff1(0x22b)](new Date()),
+          _0x1e1577[_0xdaaff1(0x2d4) + _0xdaaff1(0x2f5)](new Date());
+        const _0x5b5099 = await _0x1e1577[_0xdaaff1(0x416)]({
+          useObjectStreams: !![],
+        });
+        (compressedBlob = new Blob([_0x5b5099], {
+          type: _0x303490[_0xdaaff1(0x3c9)],
+        })),
+          (compressedSize = compressedBlob[_0xdaaff1(0x1ff)]),
+          (pdfCompressOutput[_0xdaaff1(0x251)] =
+            _0xdaaff1(0x461) +
+            _0xdaaff1(0x31d) +
+            _0xdaaff1(0x2c2) +
+            _0x303490[_0xdaaff1(0x3eb)](
+              originalSize,
+              -0x1 * 0x2337 + 0x1 * -0x1dcd + 0x4504
+            )[_0xdaaff1(0x2bc)](0x2b6 * 0x3 + 0x10 * 0xb5 + 0x2c7 * -0x7) +
+            (_0xdaaff1(0x267) +
+              _0xdaaff1(0x2d2) +
+              _0xdaaff1(0x49e) +
+              _0xdaaff1(0x369)) +
+            _0x303490[_0xdaaff1(0x26e)](
+              compressedSize,
+              -0x2d7 * 0x5 + 0x4d * -0x59 + -0x59f * -0x8
+            )[_0xdaaff1(0x2bc)](0x56 * 0x73 + 0xcfe + 0x371 * -0xf) +
+            (_0xdaaff1(0x267) + _0xdaaff1(0x48e) + _0xdaaff1(0x496) + ">\x20") +
+            _0x303490[_0xdaaff1(0x490)](
+              _0x303490[_0xdaaff1(0x276)](
+                0x2485 + -0x1553 * -0x1 + 0xdd * -0x43,
+                _0x303490[_0xdaaff1(0x2cb)](compressedSize, originalSize)
+              ),
+              -0x3 * -0x7ef + -0xd2b + 0x13 * -0x8a
+            )[_0xdaaff1(0x2bc)](0x187f + 0x1524 + 0x16 * -0x213) +
+            _0xdaaff1(0x43a)),
+          (downloadCompressedPdfBtn[_0xdaaff1(0x3c6)][_0xdaaff1(0x3f4)] =
+            _0x303490[_0xdaaff1(0x382)]);
+      } catch (_0x1a8229) {
+        (pdfCompressOutput[_0xdaaff1(0x251)] = _0x303490[_0xdaaff1(0x281)](
+          _0x303490[_0xdaaff1(0x487)],
+          _0x1a8229[_0xdaaff1(0x3e0)]
+        )),
+          (downloadCompressedPdfBtn[_0xdaaff1(0x3c6)][_0xdaaff1(0x3f4)] =
+            _0x303490[_0xdaaff1(0x2b2)]);
+      }
+    }
+  ),
+  downloadCompressedPdfBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    () => {
+      const _0x43ee4b = _0x14a98f,
+        _0x1af16b = {
+          NUpHt: _0x43ee4b(0x283) + _0x43ee4b(0x207),
+          KayOT: function (_0x35066b, _0x3ec457, _0x2b2c0c) {
+            return _0x35066b(_0x3ec457, _0x2b2c0c);
+          },
+        };
+      if (!compressedBlob) return;
+      const _0x16445d = document[_0x43ee4b(0x3e4) + _0x43ee4b(0x24f)]("a");
+      (_0x16445d[_0x43ee4b(0x2b5)] =
+        URL[_0x43ee4b(0x280) + _0x43ee4b(0x37e)](compressedBlob)),
+        (_0x16445d[_0x43ee4b(0x304)] = _0x1af16b[_0x43ee4b(0x236)]),
+        _0x16445d[_0x43ee4b(0x330)](),
+        _0x1af16b[_0x43ee4b(0x450)](
+          setTimeout,
+          () =>
+            URL[_0x43ee4b(0x200) + _0x43ee4b(0x37e)](
+              _0x16445d[_0x43ee4b(0x2b5)]
+            ),
+          0x2165 + -0x1e13 + 0x96
+        );
+    }
+  );
+const pdfTextInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3ae) + "ut"
+  ),
+  clearTextInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x485) + _0x14a98f(0x3ea)
+  ),
+  convertPdfToTextBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x22c)
+  ),
+  pdfTextOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x41c) + _0x14a98f(0x286)
+  ),
+  downloadTextBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x320) + _0x14a98f(0x265)
+  );
 let extractedText = "";
-
-// Show/hide clear button for text input
-pdfTextInput.addEventListener("change", function () {
-  clearTextInputBtn.style.display = this.files.length > 0 ? "inline-block" : "none";
-});
-
-// Clear input and output
-clearTextInputBtn.addEventListener("click", function () {
-  pdfTextInput.value = "";
-  clearTextInputBtn.style.display = "none";
-  pdfTextOutput.innerHTML = "";
-  downloadTextBtn.style.display = "none";
-  extractedText = "";
-});
-
-// Convert PDF to text
-convertPdfToTextBtn.addEventListener("click", async () => {
-  const file = pdfTextInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
+pdfTextInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x394),
+  function () {
+    const _0x5483b2 = _0x14a98f,
+      _0x195779 = {
+        weuyK: function (_0x42c145, _0x20ce77) {
+          return _0x42c145 > _0x20ce77;
+        },
+        pflHw: _0x5483b2(0x2ad) + "ck",
+        vlgjG: _0x5483b2(0x2b4),
+      };
+    clearTextInputBtn[_0x5483b2(0x3c6)][_0x5483b2(0x3f4)] = _0x195779[
+      _0x5483b2(0x47e)
+    ](
+      this[_0x5483b2(0x2d5)][_0x5483b2(0x2e7)],
+      -0x2 * -0x482 + 0x162d + 0x1f31 * -0x1
+    )
+      ? _0x195779[_0x5483b2(0x201)]
+      : _0x195779[_0x5483b2(0x2b8)];
   }
-  pdfTextOutput.innerHTML = "Extracting text...";
-  extractedText = "";
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-
-  async function processPage(i) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map(item => item.str).join(" ");
-    extractedText += pageText + "\n\n";
-    pdfTextOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-    if (i < pdf.numPages) {
-      setTimeout(() => processPage(i + 1), 10);
-    } else {
-      pdfTextOutput.innerHTML = `<textarea style="width:100%;height:120px">${extractedText}</textarea>`;
-      downloadTextBtn.style.display = "inline-block";
+),
+  clearTextInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x1dbd27 = _0x14a98f,
+        _0x59737a = {
+          cwPIM: _0x1dbd27(0x20e),
+          MgABl: _0x1dbd27(0x2b4),
+        },
+        _0x56b562 = _0x59737a[_0x1dbd27(0x221)][_0x1dbd27(0x2dc)]("|");
+      let _0x4085b4 = 0x21a3 * 0x1 + 0x214f + -0x42f2;
+      while (!![]) {
+        switch (_0x56b562[_0x4085b4++]) {
+          case "0":
+            clearTextInputBtn[_0x1dbd27(0x3c6)][_0x1dbd27(0x3f4)] =
+              _0x59737a[_0x1dbd27(0x3f2)];
+            continue;
+          case "1":
+            downloadTextBtn[_0x1dbd27(0x3c6)][_0x1dbd27(0x3f4)] =
+              _0x59737a[_0x1dbd27(0x3f2)];
+            continue;
+          case "2":
+            extractedText = "";
+            continue;
+          case "3":
+            pdfTextOutput[_0x1dbd27(0x251)] = "";
+            continue;
+          case "4":
+            pdfTextInput[_0x1dbd27(0x45e)] = "";
+            continue;
+        }
+        break;
+      }
     }
-  }
-  processPage(1);
-});
-
-// Download extracted text as .txt file
-downloadTextBtn.addEventListener("click", () => {
-  const blob = new Blob([extractedText], { type: "text/plain" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "extracted.txt";
-  a.click();
-});
-
-//=========== PDF TO HTML CONVERTER ==============================
-const pdfHtmlInput = document.getElementById("pdfHtmlInput");
-const clearHtmlInputBtn = document.getElementById("clearHtmlInputBtn");
-const convertPdfToHtmlBtn = document.getElementById("convertPdfToHtmlBtn");
-const pdfHtmlOutput = document.getElementById("pdfHtmlOutput");
-const downloadHtmlBtn = document.getElementById("downloadHtmlBtn");
+  ),
+  convertPdfToTextBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x58724c = _0x14a98f,
+        _0x3dd554 = {
+          xcjGb: function (_0x250862, _0x330d78) {
+            return _0x250862 + _0x330d78;
+          },
+          YIAoN: function (_0x5bf310, _0x50312c) {
+            return _0x5bf310 < _0x50312c;
+          },
+          IwrPp: function (_0x449b6b, _0x3f2727, _0x2568d5) {
+            return _0x449b6b(_0x3f2727, _0x2568d5);
+          },
+          lBUgR: _0x58724c(0x2ad) + "ck",
+          FuuCQ: function (_0x111acb, _0xd297b8) {
+            return _0x111acb !== _0xd297b8;
+          },
+          WiNVy: _0x58724c(0x359) + _0x58724c(0x3cd),
+          eUMHc: function (_0x28775e, _0x3b73b0) {
+            return _0x28775e(_0x3b73b0);
+          },
+          DReUD: _0x58724c(0x232) + _0x58724c(0x335) + _0x58724c(0x3d8) + ".",
+          HLwDM: _0x58724c(0x2c0) + _0x58724c(0x39a),
+        },
+        _0x54b4af =
+          pdfTextInput[_0x58724c(0x2d5)][0x962 * -0x1 + 0x189b + 0x1b1 * -0x9];
+      if (
+        !_0x54b4af ||
+        _0x3dd554[_0x58724c(0x1fb)](
+          _0x54b4af[_0x58724c(0x3b8)],
+          _0x3dd554[_0x58724c(0x2cc)]
+        )
+      ) {
+        _0x3dd554[_0x58724c(0x24c)](alert, _0x3dd554[_0x58724c(0x210)]);
+        return;
+      }
+      (pdfTextOutput[_0x58724c(0x251)] = _0x3dd554[_0x58724c(0x2e0)]),
+        (extractedText = "");
+      const _0x1cc79b = await _0x54b4af[_0x58724c(0x478) + "r"](),
+        _0x20f044 = await pdfjsLib[_0x58724c(0x35d) + "t"]({ data: _0x1cc79b })[
+          _0x58724c(0x2b0)
+        ];
+      async function _0x15daa1(_0x3dd733) {
+        const _0x2685ed = _0x58724c,
+          _0x1ecf17 = await _0x20f044[_0x2685ed(0x3d4)](_0x3dd733),
+          _0x17269f = await _0x1ecf17[_0x2685ed(0x28c) + _0x2685ed(0x40f)](),
+          _0x367535 = _0x17269f[_0x2685ed(0x3dd)]
+            [_0x2685ed(0x2a7)]((_0x5cbf91) => _0x5cbf91[_0x2685ed(0x46d)])
+            [_0x2685ed(0x3bb)]("\x20");
+        (extractedText += _0x3dd554[_0x2685ed(0x447)](_0x367535, "\x0a\x0a")),
+          (pdfTextOutput[_0x2685ed(0x251)] =
+            _0x2685ed(0x399) +
+            _0x2685ed(0x2a3) +
+            _0x3dd733 +
+            _0x2685ed(0x344) +
+            _0x20f044[_0x2685ed(0x218)] +
+            _0x2685ed(0x247)),
+          _0x3dd554[_0x2685ed(0x273)](_0x3dd733, _0x20f044[_0x2685ed(0x218)])
+            ? _0x3dd554[_0x2685ed(0x2d6)](
+                setTimeout,
+                () =>
+                  _0x15daa1(
+                    _0x3dd733 + (-0x46e + -0x15 * 0x1c5 + -0x2c * -0xf2)
+                  ),
+                -0x5af * -0x3 + -0x208 * 0x10 + 0xf7d
+              )
+            : ((pdfTextOutput[_0x2685ed(0x251)] =
+                _0x2685ed(0x486) +
+                _0x2685ed(0x479) +
+                _0x2685ed(0x437) +
+                _0x2685ed(0x42d) +
+                "\x22>" +
+                extractedText +
+                (_0x2685ed(0x42f) + ">")),
+              (downloadTextBtn[_0x2685ed(0x3c6)][_0x2685ed(0x3f4)] =
+                _0x3dd554[_0x2685ed(0x208)]));
+      }
+      _0x3dd554[_0x58724c(0x24c)](
+        _0x15daa1,
+        0x1 * -0x1ff4 + 0x16af + -0x1 * -0x946
+      );
+    }
+  ),
+  downloadTextBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x1f7843 = _0x14a98f,
+      _0x4039a9 = {
+        idIuJ: _0x1f7843(0x250),
+        BNkry: _0x1f7843(0x3e3) + _0x1f7843(0x2ae),
+      },
+      _0xfeb13c = new Blob([extractedText], {
+        type: _0x4039a9[_0x1f7843(0x3e9)],
+      }),
+      _0x2943fb = document[_0x1f7843(0x3e4) + _0x1f7843(0x24f)]("a");
+    (_0x2943fb[_0x1f7843(0x2b5)] =
+      URL[_0x1f7843(0x280) + _0x1f7843(0x37e)](_0xfeb13c)),
+      (_0x2943fb[_0x1f7843(0x304)] = _0x4039a9[_0x1f7843(0x2c1)]),
+      _0x2943fb[_0x1f7843(0x330)]();
+  });
+const pdfHtmlInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x415) + "ut"
+  ),
+  clearHtmlInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x32e) + _0x14a98f(0x3ea)
+  ),
+  convertPdfToHtmlBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x3f7)
+  ),
+  pdfHtmlOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x36a) + _0x14a98f(0x286)
+  ),
+  downloadHtmlBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x375) + _0x14a98f(0x3fa)
+  );
 let htmlContent = "";
-// Show/hide clear button for HTML input
-pdfHtmlInput.addEventListener("change", function () {
-  clearHtmlInputBtn.style.display = this.files.length > 0 ? "inline-block" : "none";
-});
-
-// Clear input and output
-clearHtmlInputBtn.addEventListener("click", function () {
-  pdfHtmlInput.value = "";
-  clearHtmlInputBtn.style.display = "none";
-  pdfHtmlOutput.innerHTML = "";
-  downloadHtmlBtn.style.display = "none";
-  htmlContent = "";
-});
-
-// Convert PDF to HTML
-convertPdfToHtmlBtn.addEventListener("click", async () => {
-  const file = pdfHtmlInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
+pdfHtmlInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x394),
+  function () {
+    const _0x1a8643 = _0x14a98f,
+      _0x5d623f = {
+        MLDWR: function (_0x23a024, _0x57bcfc) {
+          return _0x23a024 > _0x57bcfc;
+        },
+        dmfPa: _0x1a8643(0x2ad) + "ck",
+        cbYjI: _0x1a8643(0x2b4),
+      };
+    clearHtmlInputBtn[_0x1a8643(0x3c6)][_0x1a8643(0x3f4)] = _0x5d623f[
+      _0x1a8643(0x323)
+    ](
+      this[_0x1a8643(0x2d5)][_0x1a8643(0x2e7)],
+      0x1ad7 * 0x1 + 0x9a * 0x3c + -0x1 * 0x3eef
+    )
+      ? _0x5d623f[_0x1a8643(0x338)]
+      : _0x5d623f[_0x1a8643(0x317)];
   }
-  pdfHtmlOutput.innerHTML = "Converting to HTML...";
-  htmlContent = "";
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  async function processPage(i) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map(item => item.str).join(" ");
-    htmlContent += `<div class="pdf-page"><h2>Page ${i}</h2><p>${pageText}</p></div>`;
-    pdfHtmlOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-    if (i < pdf.numPages) {
-      setTimeout(() => processPage(i + 1), 10);
+),
+  clearHtmlInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x1e907b = _0x14a98f,
+        _0x9f7a20 = {
+          VfGdC: _0x1e907b(0x358),
+          wpcrj: _0x1e907b(0x2b4),
+        },
+        _0x481c5c = _0x9f7a20[_0x1e907b(0x23f)][_0x1e907b(0x2dc)]("|");
+      let _0x213eea = 0xf * -0x10e + 0x1 * -0x20e6 + 0x30b8;
+      while (!![]) {
+        switch (_0x481c5c[_0x213eea++]) {
+          case "0":
+            pdfHtmlInput[_0x1e907b(0x45e)] = "";
+            continue;
+          case "1":
+            clearHtmlInputBtn[_0x1e907b(0x3c6)][_0x1e907b(0x3f4)] =
+              _0x9f7a20[_0x1e907b(0x351)];
+            continue;
+          case "2":
+            downloadHtmlBtn[_0x1e907b(0x3c6)][_0x1e907b(0x3f4)] =
+              _0x9f7a20[_0x1e907b(0x351)];
+            continue;
+          case "3":
+            pdfHtmlOutput[_0x1e907b(0x251)] = "";
+            continue;
+          case "4":
+            htmlContent = "";
+            continue;
+        }
+        break;
+      }
     }
-    else {
-      pdfHtmlOutput.innerHTML = `
-      <textarea style="width:100%;height:180px">${htmlContent
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")}</textarea>
-      <div class="pdf-content" style="margin-top:10px">${htmlContent}</div>
-      `;
-      downloadHtmlBtn.style.display = "inline-block";
+  ),
+  convertPdfToHtmlBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x2478bb = _0x14a98f,
+        _0x3bd337 = {
+          gxrSb: function (_0x23b90b, _0x49fb74) {
+            return _0x23b90b < _0x49fb74;
+          },
+          mBdQe: function (_0xc17ec1, _0x20a4f7, _0x1c2e3f) {
+            return _0xc17ec1(_0x20a4f7, _0x1c2e3f);
+          },
+          UqRwe: _0x2478bb(0x48f),
+          pZeqV: _0x2478bb(0x2ab),
+          zgmHF: _0x2478bb(0x2ad) + "ck",
+          btuXa: function (_0x2eb0c4, _0x1604ef) {
+            return _0x2eb0c4 !== _0x1604ef;
+          },
+          PqQyp: _0x2478bb(0x359) + _0x2478bb(0x3cd),
+          StBNr: function (_0xcd36ff, _0x5d999a) {
+            return _0xcd36ff(_0x5d999a);
+          },
+          vCjbZ: _0x2478bb(0x232) + _0x2478bb(0x335) + _0x2478bb(0x3d8) + ".",
+          NPsiU: _0x2478bb(0x1f6) + _0x2478bb(0x482) + ".",
+          NNHXu: function (_0x58952b, _0x5321e6) {
+            return _0x58952b(_0x5321e6);
+          },
+        },
+        _0x4394c2 =
+          pdfHtmlInput[_0x2478bb(0x2d5)][
+            -0xbc0 * -0x1 + -0x1b * 0x139 + 0x1543
+          ];
+      if (
+        !_0x4394c2 ||
+        _0x3bd337[_0x2478bb(0x39c)](
+          _0x4394c2[_0x2478bb(0x3b8)],
+          _0x3bd337[_0x2478bb(0x1f2)]
+        )
+      ) {
+        _0x3bd337[_0x2478bb(0x343)](alert, _0x3bd337[_0x2478bb(0x25c)]);
+        return;
+      }
+      (pdfHtmlOutput[_0x2478bb(0x251)] = _0x3bd337[_0x2478bb(0x2e2)]),
+        (htmlContent = "");
+      const _0x2f6944 = await _0x4394c2[_0x2478bb(0x478) + "r"](),
+        _0x2ed6ac = await pdfjsLib[_0x2478bb(0x35d) + "t"]({ data: _0x2f6944 })[
+          _0x2478bb(0x2b0)
+        ];
+      async function _0x287b06(_0x4cd761) {
+        const _0x63d66f = _0x2478bb,
+          _0x55ae5f = await _0x2ed6ac[_0x63d66f(0x3d4)](_0x4cd761),
+          _0x2cd2b0 = await _0x55ae5f[_0x63d66f(0x28c) + _0x63d66f(0x40f)](),
+          _0x1616df = _0x2cd2b0[_0x63d66f(0x3dd)]
+            [_0x63d66f(0x2a7)]((_0x11f24f) => _0x11f24f[_0x63d66f(0x46d)])
+            [_0x63d66f(0x3bb)]("\x20");
+        (htmlContent +=
+          _0x63d66f(0x307) +
+          _0x63d66f(0x3c4) +
+          _0x63d66f(0x445) +
+          "\x20" +
+          _0x4cd761 +
+          _0x63d66f(0x2be) +
+          _0x1616df +
+          _0x63d66f(0x410)),
+          (pdfHtmlOutput[_0x63d66f(0x251)] =
+            _0x63d66f(0x399) +
+            _0x63d66f(0x2a3) +
+            _0x4cd761 +
+            _0x63d66f(0x344) +
+            _0x2ed6ac[_0x63d66f(0x218)] +
+            _0x63d66f(0x247)),
+          _0x3bd337[_0x63d66f(0x392)](_0x4cd761, _0x2ed6ac[_0x63d66f(0x218)])
+            ? _0x3bd337[_0x63d66f(0x45b)](
+                setTimeout,
+                () => _0x287b06(_0x4cd761 + (-0x16f1 + -0x953 + 0x2045 * 0x1)),
+                -0x2 * 0xf69 + 0x4ef + -0x1 * -0x19ed
+              )
+            : ((pdfHtmlOutput[_0x63d66f(0x251)] =
+                _0x63d66f(0x32c) +
+                _0x63d66f(0x46a) +
+                _0x63d66f(0x3cf) +
+                _0x63d66f(0x442) +
+                _0x63d66f(0x252) +
+                htmlContent[_0x63d66f(0x227)](
+                  /</g,
+                  _0x3bd337[_0x63d66f(0x3df)]
+                )[_0x63d66f(0x227)](/>/g, _0x3bd337[_0x63d66f(0x22d)]) +
+                (_0x63d66f(0x42f) +
+                  _0x63d66f(0x4ab) +
+                  _0x63d66f(0x40b) +
+                  _0x63d66f(0x472) +
+                  _0x63d66f(0x1f1) +
+                  _0x63d66f(0x403) +
+                  _0x63d66f(0x462)) +
+                htmlContent +
+                (_0x63d66f(0x48c) + _0x63d66f(0x214))),
+              (downloadHtmlBtn[_0x63d66f(0x3c6)][_0x63d66f(0x3f4)] =
+                _0x3bd337[_0x63d66f(0x2a0)]));
+      }
+      _0x3bd337[_0x2478bb(0x389)](
+        _0x287b06,
+        -0x117 * -0x1e + 0x4a2 * -0x1 + -0x1c0f
+      );
     }
-  }
-  processPage(1); 
-});
-
-// Download HTML content as .html file
-downloadHtmlBtn.addEventListener("click", () => {
-  const blob = new Blob([htmlContent], { type: "text/html" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "converted.html";
-  a.click();
-});
-
-// ====================== PDF TO EPUB CONVERTER ===============================
-const pdfEpubInput = document.getElementById("pdfEpubInput");
-const clearEpubInputBtn = document.getElementById("clearEpubInputBtn");
-const convertPdfToEpubBtn = document.getElementById("convertPdfToEpubBtn");
-const pdfEpubOutput = document.getElementById("pdfEpubOutput");
-const downloadEpubBtn = document.getElementById("downloadEpubBtn");
+  ),
+  downloadHtmlBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x5489a1 = _0x14a98f,
+      _0x5613de = {
+        uxKvj: _0x5489a1(0x29e),
+        Umfuj: _0x5489a1(0x345) + _0x5489a1(0x4a0),
+      },
+      _0x5018aa = new Blob([htmlContent], {
+        type: _0x5613de[_0x5489a1(0x489)],
+      }),
+      _0x118660 = document[_0x5489a1(0x3e4) + _0x5489a1(0x24f)]("a");
+    (_0x118660[_0x5489a1(0x2b5)] =
+      URL[_0x5489a1(0x280) + _0x5489a1(0x37e)](_0x5018aa)),
+      (_0x118660[_0x5489a1(0x304)] = _0x5613de[_0x5489a1(0x3db)]),
+      _0x118660[_0x5489a1(0x330)]();
+  });
+const pdfEpubInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3fd) + "ut"
+  ),
+  clearEpubInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x430) + _0x14a98f(0x3ea)
+  ),
+  convertPdfToEpubBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x1fa)
+  ),
+  pdfEpubOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x329) + _0x14a98f(0x286)
+  ),
+  downloadEpubBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x356) + _0x14a98f(0x260)
+  );
 let epubContent = "";
-// Show/hide clear button for EPUB input
-pdfEpubInput.addEventListener("change", function () {
-  clearEpubInputBtn.style.display = this.files.length > 0 ? "inline-block" : "none";
-});
-// Clear input and output
-clearEpubInputBtn.addEventListener("click", function () {
-  pdfEpubInput.value = "";
-  clearEpubInputBtn.style.display = "none";
-  pdfEpubOutput.innerHTML = "";
-  downloadEpubBtn.style.display = "none";
-  epubContent = "";
-});
-// Convert PDF to EPUB
-convertPdfToEpubBtn.addEventListener("click", async () => {
-  const file = pdfEpubInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
+pdfEpubInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x394),
+  function () {
+    const _0x37b9a8 = _0x14a98f,
+      _0x10ffd9 = {
+        nmFbJ: function (_0xe5bcdd, _0x2fcce8) {
+          return _0xe5bcdd > _0x2fcce8;
+        },
+        zPKuk: _0x37b9a8(0x2ad) + "ck",
+        jioNG: _0x37b9a8(0x2b4),
+      };
+    clearEpubInputBtn[_0x37b9a8(0x3c6)][_0x37b9a8(0x3f4)] = _0x10ffd9[
+      _0x37b9a8(0x3f6)
+    ](
+      this[_0x37b9a8(0x2d5)][_0x37b9a8(0x2e7)],
+      0xd9c + -0xed * -0x14 + 0x4 * -0x808
+    )
+      ? _0x10ffd9[_0x37b9a8(0x48b)]
+      : _0x10ffd9[_0x37b9a8(0x361)];
   }
-  pdfEpubOutput.innerHTML = "Converting to EPUB...";
-  epubContent = "";
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  async function processPage(i) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map(item => item.str).join(" ");
-    epubContent += `<section><h2>Page ${i}</h2><p>${pageText}</p></section>`;
-    pdfEpubOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-    if (i < pdf.numPages) {
-      setTimeout(() => processPage(i + 1), 10);
-    } else {
-      pdfEpubOutput.innerHTML = `
-      <textarea style="width:100%;height:180px">${epubContent
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")}</textarea>
-      <div class="epub-content" style="margin-top:10px">${epubContent}</div>
-      `;
-      downloadEpubBtn.style.display = "inline-block";
+),
+  clearEpubInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x39f326 = _0x14a98f,
+        _0x463ac4 = {
+          TWtUW: _0x39f326(0x386),
+          YehpT: _0x39f326(0x2b4),
+        },
+        _0xac0289 = _0x463ac4[_0x39f326(0x220)][_0x39f326(0x2dc)]("|");
+      let _0x209d61 = 0x26d6 + -0x60 * 0x5b + -0x192 * 0x3;
+      while (!![]) {
+        switch (_0xac0289[_0x209d61++]) {
+          case "0":
+            clearEpubInputBtn[_0x39f326(0x3c6)][_0x39f326(0x3f4)] =
+              _0x463ac4[_0x39f326(0x43f)];
+            continue;
+          case "1":
+            epubContent = "";
+            continue;
+          case "2":
+            downloadEpubBtn[_0x39f326(0x3c6)][_0x39f326(0x3f4)] =
+              _0x463ac4[_0x39f326(0x43f)];
+            continue;
+          case "3":
+            pdfEpubInput[_0x39f326(0x45e)] = "";
+            continue;
+          case "4":
+            pdfEpubOutput[_0x39f326(0x251)] = "";
+            continue;
+        }
+        break;
+      }
     }
-  }
-  processPage(1);
-});
-
-// Download EPUB content as a valid .epub file
-downloadEpubBtn.addEventListener("click", async () => {
-  // 1. mimetype (must be first, uncompressed)
-  const mimetype = "application/epub+zip";
-
-  // 2. META-INF/container.xml
-  const containerXml = `<?xml version="1.0" encoding="UTF-8"?>
-<container version="1.0" xmlns="urn:oasis:names:tc:opendocument:xmlns:container">
-  <rootfiles>
-    <rootfile full-path="OEBPS/content.opf" media-type="application/oebps-package+xml"/>
-  </rootfiles>
-</container>`;
-
-  // 3. OEBPS/content.opf
-  const opf = `<?xml version="1.0" encoding="UTF-8"?>
-<package version="2.0" xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookId">
-  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <dc:title>Converted PDF</dc:title>
-    <dc:language>en</dc:language>
-    <dc:identifier id="BookId">id:pdf2epub</dc:identifier>
-  </metadata>
-  <manifest>
-    <item id="content" href="content.xhtml" media-type="application/xhtml+xml"/>
-  </manifest>
-  <spine>
-    <itemref idref="content"/>
-  </spine>
-</package>`;
-
-  // 4. OEBPS/content.xhtml
-  const xhtml = `<?xml version="1.0" encoding="UTF-8"?>
-<html xmlns="http://www.w3.org/1999/xhtml">
-  <head>
-    <title>Converted PDF</title>
-    <meta charset="UTF-8"/>
-  </head>
-  <body>
-    ${epubContent}
-  </body>
-</html>`;
-
-  // 5. Build the EPUB zip
-  const zip = new JSZip();
-  zip.file("mimetype", mimetype, { compression: "STORE" }); // must be uncompressed
-  zip.file("META-INF/container.xml", containerXml);
-  zip.file("OEBPS/content.opf", opf);
-  zip.file("OEBPS/content.xhtml", xhtml);
-
-  // 6. Download as .epub
-  const blob = await zip.generateAsync({ type: "blob" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "converted.epub";
-  a.click();
-});
-
-// ============================ PDF TO ZIP CONVERTER ===============================
-const pdfZipInput = document.getElementById("pdfZipInput");
-const clearZipInputBtn = document.getElementById("clearZipInputBtn");
-const convertPdfToZipBtn = document.getElementById("convertPdfToZipBtn");
-const pdfZipOutput = document.getElementById("pdfZipOutput");
-const downloadZipBtn = document.getElementById("downloadZipBtn");
+  ),
+  convertPdfToEpubBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x1beffc = _0x14a98f,
+        _0x49d410 = {
+          fByye: function (_0x4ff0fe, _0x3439c2) {
+            return _0x4ff0fe < _0x3439c2;
+          },
+          geHZy: function (_0x330510, _0x3fd5bb, _0x388785) {
+            return _0x330510(_0x3fd5bb, _0x388785);
+          },
+          zDKaN: _0x1beffc(0x48f),
+          uPOHs: _0x1beffc(0x2ab),
+          kfCXo: _0x1beffc(0x2ad) + "ck",
+          xzbCH: function (_0x43754c, _0x40bcaa) {
+            return _0x43754c !== _0x40bcaa;
+          },
+          CwrhX: _0x1beffc(0x359) + _0x1beffc(0x3cd),
+          MxnuR: function (_0x22c332, _0x1d3121) {
+            return _0x22c332(_0x1d3121);
+          },
+          eXVbm: _0x1beffc(0x232) + _0x1beffc(0x335) + _0x1beffc(0x3d8) + ".",
+          EcwKL: _0x1beffc(0x1f6) + _0x1beffc(0x237) + ".",
+        },
+        _0x2b54dc =
+          pdfEpubInput[_0x1beffc(0x2d5)][0xcea + -0x2f5 * 0x1 + -0x9f5];
+      if (
+        !_0x2b54dc ||
+        _0x49d410[_0x1beffc(0x326)](
+          _0x2b54dc[_0x1beffc(0x3b8)],
+          _0x49d410[_0x1beffc(0x377)]
+        )
+      ) {
+        _0x49d410[_0x1beffc(0x2ba)](alert, _0x49d410[_0x1beffc(0x249)]);
+        return;
+      }
+      (pdfEpubOutput[_0x1beffc(0x251)] = _0x49d410[_0x1beffc(0x314)]),
+        (epubContent = "");
+      const _0x47135b = await _0x2b54dc[_0x1beffc(0x478) + "r"](),
+        _0x2d6a63 = await pdfjsLib[_0x1beffc(0x35d) + "t"]({ data: _0x47135b })[
+          _0x1beffc(0x2b0)
+        ];
+      async function _0xafc612(_0x216c2e) {
+        const _0x55f3ff = _0x1beffc,
+          _0x588e94 = await _0x2d6a63[_0x55f3ff(0x3d4)](_0x216c2e),
+          _0x226045 = await _0x588e94[_0x55f3ff(0x28c) + _0x55f3ff(0x40f)](),
+          _0x1c35c6 = _0x226045[_0x55f3ff(0x3dd)]
+            [_0x55f3ff(0x2a7)]((_0x224a9a) => _0x224a9a[_0x55f3ff(0x46d)])
+            [_0x55f3ff(0x3bb)]("\x20");
+        (epubContent +=
+          _0x55f3ff(0x28d) +
+          _0x55f3ff(0x3f9) +
+          _0x216c2e +
+          _0x55f3ff(0x2be) +
+          _0x1c35c6 +
+          (_0x55f3ff(0x339) + _0x55f3ff(0x463))),
+          (pdfEpubOutput[_0x55f3ff(0x251)] =
+            _0x55f3ff(0x399) +
+            _0x55f3ff(0x2a3) +
+            _0x216c2e +
+            _0x55f3ff(0x344) +
+            _0x2d6a63[_0x55f3ff(0x218)] +
+            _0x55f3ff(0x247)),
+          _0x49d410[_0x55f3ff(0x2ff)](_0x216c2e, _0x2d6a63[_0x55f3ff(0x218)])
+            ? _0x49d410[_0x55f3ff(0x405)](
+                setTimeout,
+                () => _0xafc612(_0x216c2e + (-0x3f5 * -0x1 + -0x1812 + 0x141e)),
+                0xef * 0xd + 0x7 * 0x557 + -0x83f * 0x6
+              )
+            : ((pdfEpubOutput[_0x55f3ff(0x251)] =
+                _0x55f3ff(0x32c) +
+                _0x55f3ff(0x46a) +
+                _0x55f3ff(0x3cf) +
+                _0x55f3ff(0x442) +
+                _0x55f3ff(0x252) +
+                epubContent[_0x55f3ff(0x227)](
+                  /</g,
+                  _0x49d410[_0x55f3ff(0x271)]
+                )[_0x55f3ff(0x227)](/>/g, _0x49d410[_0x55f3ff(0x42b)]) +
+                (_0x55f3ff(0x42f) +
+                  _0x55f3ff(0x4ab) +
+                  _0x55f3ff(0x40b) +
+                  _0x55f3ff(0x34f) +
+                  _0x55f3ff(0x474) +
+                  _0x55f3ff(0x324) +
+                  _0x55f3ff(0x21d)) +
+                epubContent +
+                (_0x55f3ff(0x48c) + _0x55f3ff(0x214))),
+              (downloadEpubBtn[_0x55f3ff(0x3c6)][_0x55f3ff(0x3f4)] =
+                _0x49d410[_0x55f3ff(0x346)]));
+      }
+      _0x49d410[_0x1beffc(0x2ba)](
+        _0xafc612,
+        0x190 + 0x8e * 0x2b + 0x1969 * -0x1
+      );
+    }
+  ),
+  downloadEpubBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x414340 = _0x14a98f,
+        _0x427a81 = {
+          OLOib: _0x414340(0x359) + _0x414340(0x42a),
+          PLaZl: _0x414340(0x29c),
+          CvVMu: _0x414340(0x35e),
+          uPDdp: _0x414340(0x44c) + _0x414340(0x35a) + "ml",
+          WYAfG: _0x414340(0x33e) + _0x414340(0x2bf),
+          jAjTx: _0x414340(0x33e) + _0x414340(0x22e),
+          YYbye: _0x414340(0x2fc),
+          xnziU: _0x414340(0x345) + _0x414340(0x451),
+        },
+        _0x2b5721 = _0x427a81[_0x414340(0x3ab)],
+        _0x60ff4e =
+          _0x414340(0x2fe) +
+          _0x414340(0x3c1) +
+          _0x414340(0x3e5) +
+          _0x414340(0x275) +
+          _0x414340(0x31c) +
+          _0x414340(0x388) +
+          _0x414340(0x32b) +
+          _0x414340(0x3f1) +
+          _0x414340(0x458) +
+          _0x414340(0x2b9) +
+          _0x414340(0x300) +
+          _0x414340(0x30f) +
+          _0x414340(0x393) +
+          _0x414340(0x380) +
+          _0x414340(0x25f) +
+          _0x414340(0x2e8) +
+          _0x414340(0x33e) +
+          _0x414340(0x253) +
+          _0x414340(0x4a9) +
+          _0x414340(0x266) +
+          _0x414340(0x47d) +
+          _0x414340(0x43d) +
+          _0x414340(0x3ec) +
+          _0x414340(0x384) +
+          _0x414340(0x3b9) +
+          ">",
+        _0x5443ff =
+          _0x414340(0x2fe) +
+          _0x414340(0x3c1) +
+          _0x414340(0x3e5) +
+          _0x414340(0x275) +
+          _0x414340(0x475) +
+          _0x414340(0x233) +
+          _0x414340(0x282) +
+          _0x414340(0x2fb) +
+          _0x414340(0x2f3) +
+          _0x414340(0x2c4) +
+          _0x414340(0x25a) +
+          _0x414340(0x459) +
+          _0x414340(0x4a8) +
+          _0x414340(0x25d) +
+          _0x414340(0x387) +
+          _0x414340(0x230) +
+          _0x414340(0x20c) +
+          _0x414340(0x3c7) +
+          _0x414340(0x20b) +
+          _0x414340(0x431) +
+          _0x414340(0x20f) +
+          _0x414340(0x455) +
+          _0x414340(0x229) +
+          _0x414340(0x243) +
+          _0x414340(0x353) +
+          _0x414340(0x44a) +
+          _0x414340(0x202) +
+          _0x414340(0x2fa) +
+          _0x414340(0x44f) +
+          _0x414340(0x45d) +
+          _0x414340(0x3bf) +
+          _0x414340(0x352) +
+          _0x414340(0x41b) +
+          _0x414340(0x301) +
+          _0x414340(0x448) +
+          _0x414340(0x29f) +
+          _0x414340(0x4aa) +
+          _0x414340(0x366) +
+          _0x414340(0x337) +
+          _0x414340(0x34e) +
+          _0x414340(0x2e3) +
+          _0x414340(0x362) +
+          _0x414340(0x39d) +
+          _0x414340(0x2f0) +
+          _0x414340(0x434) +
+          _0x414340(0x420) +
+          _0x414340(0x24a) +
+          _0x414340(0x2c7) +
+          _0x414340(0x3ef) +
+          _0x414340(0x46f),
+        _0x3f1948 =
+          _0x414340(0x2fe) +
+          _0x414340(0x3c1) +
+          _0x414340(0x3e5) +
+          _0x414340(0x275) +
+          _0x414340(0x390) +
+          _0x414340(0x2e6) +
+          _0x414340(0x3b0) +
+          _0x414340(0x36b) +
+          _0x414340(0x488) +
+          _0x414340(0x2da) +
+          _0x414340(0x1fc) +
+          _0x414340(0x43b) +
+          _0x414340(0x245) +
+          _0x414340(0x315) +
+          _0x414340(0x25b) +
+          _0x414340(0x4a6) +
+          _0x414340(0x2ce) +
+          _0x414340(0x2c8) +
+          epubContent +
+          (_0x414340(0x24d) + _0x414340(0x3b1)),
+        _0x70693e = new JSZip();
+      _0x70693e[_0x414340(0x21e)](_0x427a81[_0x414340(0x2d3)], _0x2b5721, {
+        compression: _0x427a81[_0x414340(0x426)],
+      }),
+        _0x70693e[_0x414340(0x21e)](_0x427a81[_0x414340(0x1f7)], _0x60ff4e),
+        _0x70693e[_0x414340(0x21e)](_0x427a81[_0x414340(0x498)], _0x5443ff),
+        _0x70693e[_0x414340(0x21e)](_0x427a81[_0x414340(0x3da)], _0x3f1948);
+      const _0x2f2242 = await _0x70693e[_0x414340(0x33d) + _0x414340(0x3dc)]({
+          type: _0x427a81[_0x414340(0x30a)],
+        }),
+        _0x47e4da = document[_0x414340(0x3e4) + _0x414340(0x24f)]("a");
+      (_0x47e4da[_0x414340(0x2b5)] =
+        URL[_0x414340(0x280) + _0x414340(0x37e)](_0x2f2242)),
+        (_0x47e4da[_0x414340(0x304)] = _0x427a81[_0x414340(0x32f)]),
+        _0x47e4da[_0x414340(0x330)]();
+    }
+  );
+const pdfZipInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x374) + "t"
+  ),
+  clearZipInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a5) + _0x14a98f(0x3ac)
+  ),
+  convertPdfToZipBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x2b6)
+  ),
+  pdfZipOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x234) + "ut"
+  ),
+  downloadZipBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x26b) + _0x14a98f(0x2e1)
+  );
 let zipContent = "";
-// Show/hide clear button for ZIP input
-pdfZipInput.addEventListener("change", function () {
-  clearZipInputBtn.style.display =
-    this.files.length > 0 ? "inline-block" : "none";
-});
-
-// Clear input and output
-clearZipInputBtn.addEventListener("click", function () {
-  pdfZipInput.value = "";
-  clearZipInputBtn.style.display = "none";
-  pdfZipOutput.innerHTML = "";
-  downloadZipBtn.style.display = "none";
-  zipContent = "";
-});
-
-// Convert PDF to ZIP (no textarea, just process and enable download)
-convertPdfToZipBtn.addEventListener("click", async () => {
-  const file = pdfZipInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
-  }
-  pdfZipOutput.innerHTML = "Converting to ZIP...";
-  zipContent = "";
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  for (let i = 1; i <= pdf.numPages; i++) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map((item) => item.str).join(" ");
-    zipContent += `<section><h2>Page ${i}</h2><p>${pageText}</p></section>\n`;
-    pdfZipOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-  }
-  pdfZipOutput.innerHTML = "Ready to download ZIP!";
-  downloadZipBtn.style.display = "inline-block";
-});
-// Download ZIP content as .zip file
-downloadZipBtn.addEventListener("click", () => {
-  const zip = new JSZip();
-  const file = pdfZipInput.files[0];
-  if (!file) return;
-  zip.file(file.name, file); // Add the original PDF file to the ZIP
-  zip.generateAsync({ type: "blob" }).then((blob) => {
-    const a = document.createElement("a");
-    a.href = URL.createObjectURL(blob);
-    a.download = "converted.zip";
-    a.click();
+pdfZipInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), function () {
+  const _0x52d324 = _0x14a98f,
+    _0x165c93 = {
+      yZAlf: function (_0x33274c, _0x1a1269) {
+        return _0x33274c > _0x1a1269;
+      },
+      yGvsn: _0x52d324(0x2ad) + "ck",
+      iNsMB: _0x52d324(0x2b4),
+    };
+  clearZipInputBtn[_0x52d324(0x3c6)][_0x52d324(0x3f4)] = _0x165c93[
+    _0x52d324(0x342)
+  ](
+    this[_0x52d324(0x2d5)][_0x52d324(0x2e7)],
+    0x1 * 0xf89 + -0x1833 + 0x2 * 0x455
+  )
+    ? _0x165c93[_0x52d324(0x354)]
+    : _0x165c93[_0x52d324(0x49a)];
+}),
+  clearZipInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x5245ff = _0x14a98f,
+        _0x100056 = {
+          uoMBL: _0x5245ff(0x34a),
+          VWldM: _0x5245ff(0x2b4),
+        },
+        _0x157c55 = _0x100056[_0x5245ff(0x292)][_0x5245ff(0x2dc)]("|");
+      let _0x2acaf9 = -0x4 * -0x7b7 + 0x2304 + -0x41e0;
+      while (!![]) {
+        switch (_0x157c55[_0x2acaf9++]) {
+          case "0":
+            pdfZipOutput[_0x5245ff(0x251)] = "";
+            continue;
+          case "1":
+            zipContent = "";
+            continue;
+          case "2":
+            pdfZipInput[_0x5245ff(0x45e)] = "";
+            continue;
+          case "3":
+            downloadZipBtn[_0x5245ff(0x3c6)][_0x5245ff(0x3f4)] =
+              _0x100056[_0x5245ff(0x241)];
+            continue;
+          case "4":
+            clearZipInputBtn[_0x5245ff(0x3c6)][_0x5245ff(0x3f4)] =
+              _0x100056[_0x5245ff(0x241)];
+            continue;
+        }
+        break;
+      }
+    }
+  ),
+  convertPdfToZipBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x5c55ea = _0x14a98f,
+        _0x2a365a = {
+          DUzqD: function (_0x5c0c8b, _0x27fbea) {
+            return _0x5c0c8b !== _0x27fbea;
+          },
+          NKWSD: _0x5c55ea(0x359) + _0x5c55ea(0x3cd),
+          mtNOC: function (_0xf93885, _0x41aad6) {
+            return _0xf93885(_0x41aad6);
+          },
+          cpygW: _0x5c55ea(0x232) + _0x5c55ea(0x335) + _0x5c55ea(0x3d8) + ".",
+          RxIWs: _0x5c55ea(0x1f6) + _0x5c55ea(0x4a7),
+          ovyEM: function (_0x20dbdc, _0x57a521) {
+            return _0x20dbdc <= _0x57a521;
+          },
+          LyYHH: _0x5c55ea(0x433) + _0x5c55ea(0x311) + "P!",
+          lTEvv: _0x5c55ea(0x2ad) + "ck",
+        },
+        _0x214245 =
+          pdfZipInput[_0x5c55ea(0x2d5)][0x656 + 0x2436 + -0xaa3 * 0x4];
+      if (
+        !_0x214245 ||
+        _0x2a365a[_0x5c55ea(0x2aa)](
+          _0x214245[_0x5c55ea(0x3b8)],
+          _0x2a365a[_0x5c55ea(0x3a0)]
+        )
+      ) {
+        _0x2a365a[_0x5c55ea(0x341)](alert, _0x2a365a[_0x5c55ea(0x3a8)]);
+        return;
+      }
+      (pdfZipOutput[_0x5c55ea(0x251)] = _0x2a365a[_0x5c55ea(0x322)]),
+        (zipContent = "");
+      const _0x33abc1 = await _0x214245[_0x5c55ea(0x478) + "r"](),
+        _0x313e1b = await pdfjsLib[_0x5c55ea(0x35d) + "t"]({ data: _0x33abc1 })[
+          _0x5c55ea(0x2b0)
+        ];
+      for (
+        let _0x542339 = -0x12db + 0x5db + 0xd01;
+        _0x2a365a[_0x5c55ea(0x47f)](_0x542339, _0x313e1b[_0x5c55ea(0x218)]);
+        _0x542339++
+      ) {
+        const _0x3162f4 = await _0x313e1b[_0x5c55ea(0x3d4)](_0x542339),
+          _0x4f5ca7 = await _0x3162f4[_0x5c55ea(0x28c) + _0x5c55ea(0x40f)](),
+          _0x367e75 = _0x4f5ca7[_0x5c55ea(0x3dd)]
+            [_0x5c55ea(0x2a7)]((_0x2546a0) => _0x2546a0[_0x5c55ea(0x46d)])
+            [_0x5c55ea(0x3bb)]("\x20");
+        (zipContent +=
+          _0x5c55ea(0x28d) +
+          _0x5c55ea(0x3f9) +
+          _0x542339 +
+          _0x5c55ea(0x2be) +
+          _0x367e75 +
+          (_0x5c55ea(0x339) + _0x5c55ea(0x3c5))),
+          (pdfZipOutput[_0x5c55ea(0x251)] =
+            _0x5c55ea(0x399) +
+            _0x5c55ea(0x2a3) +
+            _0x542339 +
+            _0x5c55ea(0x344) +
+            _0x313e1b[_0x5c55ea(0x218)] +
+            _0x5c55ea(0x247));
+      }
+      (pdfZipOutput[_0x5c55ea(0x251)] = _0x2a365a[_0x5c55ea(0x2b7)]),
+        (downloadZipBtn[_0x5c55ea(0x3c6)][_0x5c55ea(0x3f4)] =
+          _0x2a365a[_0x5c55ea(0x3ed)]);
+    }
+  ),
+  downloadZipBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x2f152b = _0x14a98f,
+      _0x2f970c = {
+        jbZpb: _0x2f152b(0x345) + _0x2f152b(0x264),
+        xUzib: _0x2f152b(0x2fc),
+      },
+      _0x309310 = new JSZip(),
+      _0x39a07a =
+        pdfZipInput[_0x2f152b(0x2d5)][-0x1ef6 + 0x1168 * -0x1 + 0x305e];
+    if (!_0x39a07a) return;
+    _0x309310[_0x2f152b(0x21e)](_0x39a07a[_0x2f152b(0x209)], _0x39a07a),
+      _0x309310[_0x2f152b(0x33d) + _0x2f152b(0x3dc)]({
+        type: _0x2f970c[_0x2f152b(0x3b5)],
+      })[_0x2f152b(0x295)]((_0x2082fa) => {
+        const _0x3b6713 = _0x2f152b,
+          _0x35d8ae = document[_0x3b6713(0x3e4) + _0x3b6713(0x24f)]("a");
+        (_0x35d8ae[_0x3b6713(0x2b5)] =
+          URL[_0x3b6713(0x280) + _0x3b6713(0x37e)](_0x2082fa)),
+          (_0x35d8ae[_0x3b6713(0x304)] = _0x2f970c[_0x3b6713(0x336)]),
+          _0x35d8ae[_0x3b6713(0x330)]();
+      });
   });
-});
-
-//========================== PDF TO JSON CONVERTER ============================
-const pdfJsonInput = document.getElementById("pdfJsonInput");
-const clearJsonInputBtn = document.getElementById("clearJsonInputBtn");
-const convertPdfToJsonBtn = document.getElementById("convertPdfToJsonBtn");
-const pdfJsonOutput = document.getElementById("pdfJsonOutput");
-const downloadJsonBtn = document.getElementById("downloadJsonBtn");
+const pdfJsonInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x269) + "ut"
+  ),
+  clearJsonInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x332) + _0x14a98f(0x3ea)
+  ),
+  convertPdfToJsonBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x4a1)
+  ),
+  pdfJsonOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x28b) + _0x14a98f(0x286)
+  ),
+  downloadJsonBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x36f) + _0x14a98f(0x2cd)
+  );
 let jsonContent = "";
-// Show/hide clear button for JSON input
-pdfJsonInput.addEventListener("change", function () {
-  clearJsonInputBtn.style.display =
-    this.files.length > 0 ? "inline-block" : "none";
-});
-// Clear input and output
-clearJsonInputBtn.addEventListener("click", function () {
-  pdfJsonInput.value = "";
-  clearJsonInputBtn.style.display = "none";
-  pdfJsonOutput.innerHTML = "";
-  downloadJsonBtn.style.display = "none";
-  jsonContent = "";
-});
-// Convert PDF to JSON
-convertPdfToJsonBtn.addEventListener("click", async () => {
-  const file = pdfJsonInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
+pdfJsonInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+  _0x14a98f(0x394),
+  function () {
+    const _0x188fe8 = _0x14a98f,
+      _0x1822a1 = {
+        rQJYn: function (_0x35d464, _0x318648) {
+          return _0x35d464 > _0x318648;
+        },
+        igHmi: _0x188fe8(0x2ad) + "ck",
+        hecvo: _0x188fe8(0x2b4),
+      };
+    clearJsonInputBtn[_0x188fe8(0x3c6)][_0x188fe8(0x3f4)] = _0x1822a1[
+      _0x188fe8(0x38f)
+    ](
+      this[_0x188fe8(0x2d5)][_0x188fe8(0x2e7)],
+      0x1 * -0xda + -0x1fd1 + 0x20ab * 0x1
+    )
+      ? _0x1822a1[_0x188fe8(0x45c)]
+      : _0x1822a1[_0x188fe8(0x452)];
   }
-  pdfJsonOutput.innerHTML = "Converting to JSON...";
-  jsonContent = [];
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  async function processPage(i) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map((item) => item.str).join(" ");
-    jsonContent.push({ page: i, text: pageText });
-    pdfJsonOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-    if (i < pdf.numPages) {
-      setTimeout(() => processPage(i + 1), 10);
-    } else {
-      pdfJsonOutput.innerHTML = `<textarea style="width:100%;height:120px;resize:vertical">${JSON.stringify(
-        jsonContent,
-        null,
-        2
-      )}</textarea>`;
-      downloadJsonBtn.style.display = "inline-block";
+),
+  clearJsonInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x455e85 = _0x14a98f,
+        _0x5504d8 = {
+          htyhR: _0x455e85(0x3a1),
+          pyKlh: _0x455e85(0x2b4),
+        },
+        _0x558d3a = _0x5504d8[_0x455e85(0x402)][_0x455e85(0x2dc)]("|");
+      let _0x357b46 = 0xe10 + -0xa6 * 0x19 + -0x1 * -0x226;
+      while (!![]) {
+        switch (_0x558d3a[_0x357b46++]) {
+          case "0":
+            jsonContent = "";
+            continue;
+          case "1":
+            pdfJsonOutput[_0x455e85(0x251)] = "";
+            continue;
+          case "2":
+            clearJsonInputBtn[_0x455e85(0x3c6)][_0x455e85(0x3f4)] =
+              _0x5504d8[_0x455e85(0x373)];
+            continue;
+          case "3":
+            pdfJsonInput[_0x455e85(0x45e)] = "";
+            continue;
+          case "4":
+            downloadJsonBtn[_0x455e85(0x3c6)][_0x455e85(0x3f4)] =
+              _0x5504d8[_0x455e85(0x373)];
+            continue;
+        }
+        break;
+      }
     }
-  }
-  processPage(1);
-});
-// Download JSON content as .json file
-downloadJsonBtn.addEventListener("click", () => {
-  const blob = new Blob([JSON.stringify(jsonContent, null, 2)], {
-    type: "application/json",
+  ),
+  convertPdfToJsonBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x401a09 = _0x14a98f,
+        _0x377699 = {
+          dvNeo: function (_0x33cf3f, _0x4d1fbd) {
+            return _0x33cf3f < _0x4d1fbd;
+          },
+          fwZxb: function (_0x520d55, _0x2b72e8, _0x6f315) {
+            return _0x520d55(_0x2b72e8, _0x6f315);
+          },
+          fdIns: _0x401a09(0x2ad) + "ck",
+          gTVKN: function (_0x2f7c79, _0x280568) {
+            return _0x2f7c79 !== _0x280568;
+          },
+          YCQBB: _0x401a09(0x359) + _0x401a09(0x3cd),
+          Rynyw: function (_0x4d832f, _0x5726e2) {
+            return _0x4d832f(_0x5726e2);
+          },
+          xuSFx: _0x401a09(0x232) + _0x401a09(0x335) + _0x401a09(0x3d8) + ".",
+          QCMMt: _0x401a09(0x1f6) + _0x401a09(0x427) + ".",
+        },
+        _0x4c640e =
+          pdfJsonInput[_0x401a09(0x2d5)][0x2cd + -0x5 * 0x4a + -0x15b * 0x1];
+      if (
+        !_0x4c640e ||
+        _0x377699[_0x401a09(0x407)](
+          _0x4c640e[_0x401a09(0x3b8)],
+          _0x377699[_0x401a09(0x3ad)]
+        )
+      ) {
+        _0x377699[_0x401a09(0x321)](alert, _0x377699[_0x401a09(0x328)]);
+        return;
+      }
+      (pdfJsonOutput[_0x401a09(0x251)] = _0x377699[_0x401a09(0x2d7)]),
+        (jsonContent = []);
+      const _0x1d20f5 = await _0x4c640e[_0x401a09(0x478) + "r"](),
+        _0x15d0f8 = await pdfjsLib[_0x401a09(0x35d) + "t"]({ data: _0x1d20f5 })[
+          _0x401a09(0x2b0)
+        ];
+      async function _0x489171(_0x5d043e) {
+        const _0x59afdc = _0x401a09,
+          _0x698fb5 = await _0x15d0f8[_0x59afdc(0x3d4)](_0x5d043e),
+          _0x1fb771 = await _0x698fb5[_0x59afdc(0x28c) + _0x59afdc(0x40f)](),
+          _0x42bf59 = _0x1fb771[_0x59afdc(0x3dd)]
+            [_0x59afdc(0x2a7)]((_0x32e4fc) => _0x32e4fc[_0x59afdc(0x46d)])
+            [_0x59afdc(0x3bb)]("\x20");
+        jsonContent[_0x59afdc(0x1f8)]({
+          page: _0x5d043e,
+          text: _0x42bf59,
+        }),
+          (pdfJsonOutput[_0x59afdc(0x251)] =
+            _0x59afdc(0x399) +
+            _0x59afdc(0x2a3) +
+            _0x5d043e +
+            _0x59afdc(0x344) +
+            _0x15d0f8[_0x59afdc(0x218)] +
+            _0x59afdc(0x247)),
+          _0x377699[_0x59afdc(0x47a)](_0x5d043e, _0x15d0f8[_0x59afdc(0x218)])
+            ? _0x377699[_0x59afdc(0x217)](
+                setTimeout,
+                () => _0x489171(_0x5d043e + (-0x321 + -0xdc7 + 0x10e9)),
+                0x1 * -0xc49 + 0x1 * 0xbcf + 0x3 * 0x2c
+              )
+            : ((pdfJsonOutput[_0x59afdc(0x251)] =
+                _0x59afdc(0x486) +
+                _0x59afdc(0x479) +
+                _0x59afdc(0x437) +
+                _0x59afdc(0x42d) +
+                _0x59afdc(0x41e) +
+                _0x59afdc(0x371) +
+                JSON[_0x59afdc(0x454)](
+                  jsonContent,
+                  null,
+                  0x1ed5 + 0xb72 + -0x3 * 0xe17
+                ) +
+                (_0x59afdc(0x42f) + ">")),
+              (downloadJsonBtn[_0x59afdc(0x3c6)][_0x59afdc(0x3f4)] =
+                _0x377699[_0x59afdc(0x3be)]));
+      }
+      _0x377699[_0x401a09(0x321)](_0x489171, -0x1f0f + 0x452 * 0x7 + 0xd2);
+    }
+  ),
+  downloadJsonBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x5f4cdf = _0x14a98f,
+      _0x118fd0 = {
+        rihox: _0x5f4cdf(0x359) + _0x5f4cdf(0x481),
+        LGsqB: _0x5f4cdf(0x345) + _0x5f4cdf(0x47b),
+      },
+      _0x220b75 = new Blob(
+        [
+          JSON[_0x5f4cdf(0x454)](
+            jsonContent,
+            null,
+            0x2318 + 0x1 * 0x8be + -0x2bd4
+          ),
+        ],
+        { type: _0x118fd0[_0x5f4cdf(0x360)] }
+      ),
+      _0x3840bd = document[_0x5f4cdf(0x3e4) + _0x5f4cdf(0x24f)]("a");
+    (_0x3840bd[_0x5f4cdf(0x2b5)] =
+      URL[_0x5f4cdf(0x280) + _0x5f4cdf(0x37e)](_0x220b75)),
+      (_0x3840bd[_0x5f4cdf(0x304)] = _0x118fd0[_0x5f4cdf(0x40c)]),
+      _0x3840bd[_0x5f4cdf(0x330)]();
   });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "converted.json";
-  a.click();
-});
-
-// =========================== PDF TO CSV CONVERTER ============================
-const pdfCsvInput = document.getElementById("pdfCsvInput");
-const clearCsvInputBtn = document.getElementById("clearCsvInputBtn");
-const convertPdfToCsvBtn = document.getElementById("convertPdfToCsvBtn");
-const pdfCsvOutput = document.getElementById("pdfCsvOutput");
-const downloadCsvBtn = document.getElementById("downloadCsvBtn");
+function _0x3257(_0x1b1ce4, _0x2e5269) {
+  const _0x44a319 = _0x4378();
+  return (
+    (_0x3257 = function (_0x3b08b2, _0x10223c) {
+      _0x3b08b2 = _0x3b08b2 - (0x1 * -0x303 + -0x1 * 0x4b + 0x53e);
+      let _0x52802f = _0x44a319[_0x3b08b2];
+      return _0x52802f;
+    }),
+    _0x3257(_0x1b1ce4, _0x2e5269)
+  );
+}
+const pdfCsvInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3d3) + "t"
+  ),
+  clearCsvInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x26f) + _0x14a98f(0x3ac)
+  ),
+  convertPdfToCsvBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x483)
+  ),
+  pdfCsvOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x313) + "ut"
+  ),
+  downloadCsvBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x27c) + _0x14a98f(0x425)
+  );
 let csvContent = "";
-// Show/hide clear button for CSV input
-pdfCsvInput.addEventListener("change", function () {
-  clearCsvInputBtn.style.display =
-    this.files.length > 0 ? "inline-block" : "none";
-});
-// Clear input and output
-clearCsvInputBtn.addEventListener("click", function () {
-  pdfCsvInput.value = "";
-  clearCsvInputBtn.style.display = "none";
-  pdfCsvOutput.innerHTML = "";
-  downloadCsvBtn.style.display = "none";
-  csvContent = "";
-});
-// Convert PDF to CSV
-convertPdfToCsvBtn.addEventListener("click", async () => {
-  const file = pdfCsvInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return;
-  }
-  pdfCsvOutput.innerHTML = "Converting to CSV...";
-  csvContent = [];
-  const arrayBuffer = await file.arrayBuffer(); 
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  async function processPage(i) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map((item) => item.str).join(" ");
-    csvContent.push(`Page ${i},${pageText.replace(/,/g, " ")}`);
-    pdfCsvOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-    if (i < pdf.numPages) {
-      setTimeout(() => processPage(i + 1), 10);
-    } else {
-      pdfCsvOutput.innerHTML = `<textarea style="width:100%;height:120px;resize:vertical">${csvContent.join("\n")}</textarea>`;
-      downloadCsvBtn.style.display = "inline-block";
+pdfCsvInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), function () {
+  const _0x14d99e = _0x14a98f,
+    _0x10643b = {
+      EpaVt: function (_0x325c5b, _0x182f8a) {
+        return _0x325c5b > _0x182f8a;
+      },
+      BFvpt: _0x14d99e(0x2ad) + "ck",
+      lUQTq: _0x14d99e(0x2b4),
+    };
+  clearCsvInputBtn[_0x14d99e(0x3c6)][_0x14d99e(0x3f4)] = _0x10643b[
+    _0x14d99e(0x408)
+  ](
+    this[_0x14d99e(0x2d5)][_0x14d99e(0x2e7)],
+    0x3 * 0x3ad + 0x2 * 0xc7a + -0x97 * 0x3d
+  )
+    ? _0x10643b[_0x14d99e(0x308)]
+    : _0x10643b[_0x14d99e(0x21f)];
+}),
+  clearCsvInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x4655cb = _0x14a98f,
+        _0x5ade53 = {
+          XOtBs: _0x4655cb(0x2bd),
+          sBVxq: _0x4655cb(0x2b4),
+        },
+        _0x4694cc = _0x5ade53[_0x4655cb(0x30d)][_0x4655cb(0x2dc)]("|");
+      let _0x50fe1a = 0x3 * 0x9fe + 0x9a8 + -0x27a2;
+      while (!![]) {
+        switch (_0x4694cc[_0x50fe1a++]) {
+          case "0":
+            pdfCsvInput[_0x4655cb(0x45e)] = "";
+            continue;
+          case "1":
+            pdfCsvOutput[_0x4655cb(0x251)] = "";
+            continue;
+          case "2":
+            csvContent = "";
+            continue;
+          case "3":
+            clearCsvInputBtn[_0x4655cb(0x3c6)][_0x4655cb(0x3f4)] =
+              _0x5ade53[_0x4655cb(0x211)];
+            continue;
+          case "4":
+            downloadCsvBtn[_0x4655cb(0x3c6)][_0x4655cb(0x3f4)] =
+              _0x5ade53[_0x4655cb(0x211)];
+            continue;
+        }
+        break;
+      }
     }
-  }
-  processPage(1);
-});
-// Download CSV content as .csv file
-downloadCsvBtn.addEventListener("click", () => {
-  const blob = new Blob([csvContent.join("\n")], { type: "text/csv" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "converted.csv";
-  a.click();
-});
-
-
-// =========================== PDF TO XML CONVERTER ============================
-const pdfXmlInput = document.getElementById("pdfXmlInput");
-const clearXmlInputBtn = document.getElementById("clearXmlInputBtn");
-const convertPdfToXmlBtn = document.getElementById("convertPdfToXmlBtn");
-const pdfXmlOutput = document.getElementById("pdfXmlOutput");
-const downloadXmlBtn = document.getElementById("downloadXmlBtn");
+  ),
+  convertPdfToCsvBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x26fd74 = _0x14a98f,
+        _0x17887f = {
+          WkMXU: function (_0x2949ef, _0x4be505) {
+            return _0x2949ef < _0x4be505;
+          },
+          FJADV: function (_0x10622d, _0x535d20, _0x451f16) {
+            return _0x10622d(_0x535d20, _0x451f16);
+          },
+          TapUU: _0x26fd74(0x2ad) + "ck",
+          eTvDt: function (_0x6dec, _0x3d3dec) {
+            return _0x6dec !== _0x3d3dec;
+          },
+          iqgud: _0x26fd74(0x359) + _0x26fd74(0x3cd),
+          ShmuQ: function (_0x1c43fc, _0x1de283) {
+            return _0x1c43fc(_0x1de283);
+          },
+          QBGNq: _0x26fd74(0x232) + _0x26fd74(0x335) + _0x26fd74(0x3d8) + ".",
+          snCNB: _0x26fd74(0x1f6) + _0x26fd74(0x367),
+          caAhH: function (_0x51e874, _0x5a63de) {
+            return _0x51e874(_0x5a63de);
+          },
+        },
+        _0x43011e = pdfCsvInput[_0x26fd74(0x2d5)][0x2066 + -0x98e + -0x16d8];
+      if (
+        !_0x43011e ||
+        _0x17887f[_0x26fd74(0x219)](
+          _0x43011e[_0x26fd74(0x3b8)],
+          _0x17887f[_0x26fd74(0x26a)]
+        )
+      ) {
+        _0x17887f[_0x26fd74(0x4a4)](alert, _0x17887f[_0x26fd74(0x3bc)]);
+        return;
+      }
+      (pdfCsvOutput[_0x26fd74(0x251)] = _0x17887f[_0x26fd74(0x33a)]),
+        (csvContent = []);
+      const _0x48f199 = await _0x43011e[_0x26fd74(0x478) + "r"](),
+        _0x1430c2 = await pdfjsLib[_0x26fd74(0x35d) + "t"]({ data: _0x48f199 })[
+          _0x26fd74(0x2b0)
+        ];
+      async function _0xce2792(_0x32e66e) {
+        const _0x51cd86 = _0x26fd74,
+          _0xd8da2e = await _0x1430c2[_0x51cd86(0x3d4)](_0x32e66e),
+          _0x580995 = await _0xd8da2e[_0x51cd86(0x28c) + _0x51cd86(0x40f)](),
+          _0x1a5a0a = _0x580995[_0x51cd86(0x3dd)]
+            [_0x51cd86(0x2a7)]((_0x3f0f81) => _0x3f0f81[_0x51cd86(0x46d)])
+            [_0x51cd86(0x3bb)]("\x20");
+        csvContent[_0x51cd86(0x1f8)](
+          _0x51cd86(0x2f1) +
+            _0x32e66e +
+            "," +
+            _0x1a5a0a[_0x51cd86(0x227)](/,/g, "\x20")
+        ),
+          (pdfCsvOutput[_0x51cd86(0x251)] =
+            _0x51cd86(0x399) +
+            _0x51cd86(0x2a3) +
+            _0x32e66e +
+            _0x51cd86(0x344) +
+            _0x1430c2[_0x51cd86(0x218)] +
+            _0x51cd86(0x247)),
+          _0x17887f[_0x51cd86(0x256)](_0x32e66e, _0x1430c2[_0x51cd86(0x218)])
+            ? _0x17887f[_0x51cd86(0x48d)](
+                setTimeout,
+                () =>
+                  _0xce2792(
+                    _0x32e66e + (0x7 * 0x119 + -0x1 * -0x112d + -0x2c3 * 0x9)
+                  ),
+                -0x1182 + 0xad9 * 0x3 + -0xeff
+              )
+            : ((pdfCsvOutput[_0x51cd86(0x251)] =
+                _0x51cd86(0x486) +
+                _0x51cd86(0x479) +
+                _0x51cd86(0x437) +
+                _0x51cd86(0x42d) +
+                _0x51cd86(0x41e) +
+                _0x51cd86(0x371) +
+                csvContent[_0x51cd86(0x3bb)]("\x0a") +
+                (_0x51cd86(0x42f) + ">")),
+              (downloadCsvBtn[_0x51cd86(0x3c6)][_0x51cd86(0x3f4)] =
+                _0x17887f[_0x51cd86(0x334)]));
+      }
+      _0x17887f[_0x26fd74(0x310)](
+        _0xce2792,
+        0x1c9f + -0x11 * -0xc1 + 0x1 * -0x296f
+      );
+    }
+  ),
+  downloadCsvBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0x371195 = _0x14a98f,
+      _0x19f6f0 = {
+        dVKel: _0x371195(0x2d8),
+        LQzwp: _0x371195(0x345) + _0x371195(0x376),
+      },
+      _0x36a171 = new Blob([csvContent[_0x371195(0x3bb)]("\x0a")], {
+        type: _0x19f6f0[_0x371195(0x244)],
+      }),
+      _0x52a549 = document[_0x371195(0x3e4) + _0x371195(0x24f)]("a");
+    (_0x52a549[_0x371195(0x2b5)] =
+      URL[_0x371195(0x280) + _0x371195(0x37e)](_0x36a171)),
+      (_0x52a549[_0x371195(0x304)] = _0x19f6f0[_0x371195(0x2db)]),
+      _0x52a549[_0x371195(0x330)]();
+  });
+const pdfXmlInput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x27b) + "t"
+  ),
+  clearXmlInputBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3fe) + _0x14a98f(0x3ac)
+  ),
+  convertPdfToXmlBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x2a8) + _0x14a98f(0x302)
+  ),
+  pdfXmlOutput = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x3cc) + "ut"
+  ),
+  downloadXmlBtn = document[_0x14a98f(0x493) + _0x14a98f(0x476)](
+    _0x14a98f(0x34d) + _0x14a98f(0x45a)
+  );
 let xmlContent = "";
-// Show/hide clear button for XML input
-pdfXmlInput.addEventListener("change", function () {
-  clearXmlInputBtn.style.display =
-    this.files.length > 0 ? "inline-block" : "none";  
-});
-// Clear input and output
-clearXmlInputBtn.addEventListener("click", function () {
-  pdfXmlInput.value = "";
-  clearXmlInputBtn.style.display = "none";
-  pdfXmlOutput.innerHTML = "";
-  downloadXmlBtn.style.display = "none";
-  xmlContent = "";
-});
-// Convert PDF to XML
-convertPdfToXmlBtn.addEventListener("click", async () => {
-  const file = pdfXmlInput.files[0];
-  if (!file || file.type !== "application/pdf") {
-    alert("Please upload a valid PDF file.");
-    return; 
-  }
-  pdfXmlOutput.innerHTML = "Converting to XML...";
-  xmlContent = `<pdf>\n`;
-  const arrayBuffer = await file.arrayBuffer();
-  const pdf = await pdfjsLib.getDocument({ data: arrayBuffer }).promise;
-  async function processPage(i) {
-    const page = await pdf.getPage(i);
-    const textContent = await page.getTextContent();
-    const pageText = textContent.items.map((item) => item.str).join(" ");
-    xmlContent += `  <page number="${i}">\n`;
-    xmlContent += `    <text>${pageText.replace(/</g, "&lt;").replace(/>/g, "&gt;")}</text>\n`;
-    xmlContent += `  </page>\n`;
-    pdfXmlOutput.innerHTML = `<div>Processed page ${i} of ${pdf.numPages}</div>`;
-    if (i < pdf.numPages) {
-      setTimeout(() => processPage(i + 1), 10);
-    } else {
-      xmlContent += `</pdf>`;
-      pdfXmlOutput.innerHTML = `<textarea style="width:100%;height:120px;resize:vertical">${xmlContent}</textarea>`;
-      downloadXmlBtn.style.display = "inline-block";
-    } 
-  }
-  processPage(1);
-});
-// Download XML content as .xml file
-downloadXmlBtn.addEventListener("click", () => {
-  const blob = new Blob([xmlContent], { type: "application/xml" });
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(blob);
-  a.download = "converted.xml";
-  a.click();
-});
+pdfXmlInput[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x394), function () {
+  const _0x4d4b60 = _0x14a98f,
+    _0x216407 = {
+      cqEZt: function (_0x129ed8, _0xc02816) {
+        return _0x129ed8 > _0xc02816;
+      },
+      LdJFx: _0x4d4b60(0x2ad) + "ck",
+      WcVgt: _0x4d4b60(0x2b4),
+    };
+  clearXmlInputBtn[_0x4d4b60(0x3c6)][_0x4d4b60(0x3f4)] = _0x216407[
+    _0x4d4b60(0x46b)
+  ](
+    this[_0x4d4b60(0x2d5)][_0x4d4b60(0x2e7)],
+    -0x116 * 0xa + 0x2eb * 0xc + 0x4 * -0x60a
+  )
+    ? _0x216407[_0x4d4b60(0x319)]
+    : _0x216407[_0x4d4b60(0x296)];
+}),
+  clearXmlInputBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    function () {
+      const _0x9d49df = _0x14a98f,
+        _0x49fdd0 = {
+          IxCVg: _0x9d49df(0x36e),
+          YDZJW: _0x9d49df(0x2b4),
+        },
+        _0x128e81 = _0x49fdd0[_0x9d49df(0x2b1)][_0x9d49df(0x2dc)]("|");
+      let _0x38a2ca = 0x222b + 0x36d * -0x8 + -0x6c3;
+      while (!![]) {
+        switch (_0x128e81[_0x38a2ca++]) {
+          case "0":
+            pdfXmlOutput[_0x9d49df(0x251)] = "";
+            continue;
+          case "1":
+            clearXmlInputBtn[_0x9d49df(0x3c6)][_0x9d49df(0x3f4)] =
+              _0x49fdd0[_0x9d49df(0x2c5)];
+            continue;
+          case "2":
+            xmlContent = "";
+            continue;
+          case "3":
+            pdfXmlInput[_0x9d49df(0x45e)] = "";
+            continue;
+          case "4":
+            downloadXmlBtn[_0x9d49df(0x3c6)][_0x9d49df(0x3f4)] =
+              _0x49fdd0[_0x9d49df(0x2c5)];
+            continue;
+        }
+        break;
+      }
+    }
+  ),
+  convertPdfToXmlBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](
+    _0x14a98f(0x330),
+    async () => {
+      const _0x369bd3 = _0x14a98f,
+        _0x5aaf95 = {
+          EAQGq: _0x369bd3(0x48f),
+          SkdEH: _0x369bd3(0x2ab),
+          vefuO: function (_0x1ef3e4, _0x359df2) {
+            return _0x1ef3e4 < _0x359df2;
+          },
+          ALgnx: function (_0x53aa09, _0x20d1e0, _0x357248) {
+            return _0x53aa09(_0x20d1e0, _0x357248);
+          },
+          vqlLa: _0x369bd3(0x2ad) + "ck",
+          SSnko: function (_0x42fe9e, _0x58b559) {
+            return _0x42fe9e !== _0x58b559;
+          },
+          ffjwx: _0x369bd3(0x359) + _0x369bd3(0x3cd),
+          YkHsi: function (_0x47dfc9, _0xb7d261) {
+            return _0x47dfc9(_0xb7d261);
+          },
+          VnxtT: _0x369bd3(0x232) + _0x369bd3(0x335) + _0x369bd3(0x3d8) + ".",
+          lVFWh: _0x369bd3(0x1f6) + _0x369bd3(0x257),
+          cJSdH: function (_0x2622f2, _0xaf6ef1) {
+            return _0x2622f2(_0xaf6ef1);
+          },
+        },
+        _0x3df6c9 =
+          pdfXmlInput[_0x369bd3(0x2d5)][0x1c2 + 0x22df + -0x24a1 * 0x1];
+      if (
+        !_0x3df6c9 ||
+        _0x5aaf95[_0x369bd3(0x457)](
+          _0x3df6c9[_0x369bd3(0x3b8)],
+          _0x5aaf95[_0x369bd3(0x497)]
+        )
+      ) {
+        _0x5aaf95[_0x369bd3(0x396)](alert, _0x5aaf95[_0x369bd3(0x231)]);
+        return;
+      }
+      (pdfXmlOutput[_0x369bd3(0x251)] = _0x5aaf95[_0x369bd3(0x29d)]),
+        (xmlContent = _0x369bd3(0x46c));
+      const _0x4c1b4f = await _0x3df6c9[_0x369bd3(0x478) + "r"](),
+        _0x1a7859 = await pdfjsLib[_0x369bd3(0x35d) + "t"]({ data: _0x4c1b4f })[
+          _0x369bd3(0x2b0)
+        ];
+      async function _0x258b0a(_0xf7e57e) {
+        const _0x100da8 = _0x369bd3,
+          _0x6ce262 = await _0x1a7859[_0x100da8(0x3d4)](_0xf7e57e),
+          _0x2585eb = await _0x6ce262[_0x100da8(0x28c) + _0x100da8(0x40f)](),
+          _0x48cf0e = _0x2585eb[_0x100da8(0x3dd)]
+            [_0x100da8(0x2a7)]((_0x2b4b18) => _0x2b4b18[_0x100da8(0x46d)])
+            [_0x100da8(0x3bb)]("\x20");
+        (xmlContent +=
+          _0x100da8(0x242) + _0x100da8(0x40e) + _0xf7e57e + _0x100da8(0x213)),
+          (xmlContent +=
+            _0x100da8(0x473) +
+            _0x48cf0e[_0x100da8(0x227)](/</g, _0x5aaf95[_0x100da8(0x36d)])[
+              _0x100da8(0x227)
+            ](/>/g, _0x5aaf95[_0x100da8(0x449)]) +
+            _0x100da8(0x2a4)),
+          (xmlContent += _0x100da8(0x294)),
+          (pdfXmlOutput[_0x100da8(0x251)] =
+            _0x100da8(0x399) +
+            _0x100da8(0x2a3) +
+            _0xf7e57e +
+            _0x100da8(0x344) +
+            _0x1a7859[_0x100da8(0x218)] +
+            _0x100da8(0x247)),
+          _0x5aaf95[_0x100da8(0x413)](_0xf7e57e, _0x1a7859[_0x100da8(0x218)])
+            ? _0x5aaf95[_0x100da8(0x456)](
+                setTimeout,
+                () =>
+                  _0x258b0a(_0xf7e57e + (-0x67 * -0x57 + 0x25d + 0x779 * -0x5)),
+                0x986 + -0x76 * -0x5 + -0xbca * 0x1
+              )
+            : ((xmlContent += _0x100da8(0x495)),
+              (pdfXmlOutput[_0x100da8(0x251)] =
+                _0x100da8(0x486) +
+                _0x100da8(0x479) +
+                _0x100da8(0x437) +
+                _0x100da8(0x42d) +
+                _0x100da8(0x41e) +
+                _0x100da8(0x371) +
+                xmlContent +
+                (_0x100da8(0x42f) + ">")),
+              (downloadXmlBtn[_0x100da8(0x3c6)][_0x100da8(0x3f4)] =
+                _0x5aaf95[_0x100da8(0x2f9)]));
+      }
+      _0x5aaf95[_0x369bd3(0x290)](
+        _0x258b0a,
+        -0x1fcc + 0x1 * -0xcbc + -0xd * -0x36d
+      );
+    }
+  ),
+  downloadXmlBtn[_0x14a98f(0x3a5) + _0x14a98f(0x30c)](_0x14a98f(0x330), () => {
+    const _0xff8ef6 = _0x14a98f,
+      _0x2cdb31 = {
+        Jcnuv: _0xff8ef6(0x359) + _0xff8ef6(0x43c),
+        YdWYb: _0xff8ef6(0x345) + _0xff8ef6(0x40d),
+      },
+      _0x46a0b0 = new Blob([xmlContent], { type: _0x2cdb31[_0xff8ef6(0x3a6)] }),
+      _0x443e53 = document[_0xff8ef6(0x3e4) + _0xff8ef6(0x24f)]("a");
+    (_0x443e53[_0xff8ef6(0x2b5)] =
+      URL[_0xff8ef6(0x280) + _0xff8ef6(0x37e)](_0x46a0b0)),
+      (_0x443e53[_0xff8ef6(0x304)] = _0x2cdb31[_0xff8ef6(0x254)]),
+      _0x443e53[_0xff8ef6(0x330)]();
+  });
