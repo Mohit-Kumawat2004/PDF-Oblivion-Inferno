@@ -5,7 +5,7 @@ It **obliterates limitations**. One page at a time.
 
 > 💥 Why use 12 separate tools when one beast does it all?
 
----
+--- 
 
 ## 🧨 Built-In Arsenal (12 Power Tools)
 
